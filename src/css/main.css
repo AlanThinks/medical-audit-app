@@ -53,14 +53,18 @@ h2 {
   box-shadow: var(--shadow) 2px 2px 7px;
   border-radius: 0.12rem;
 }
+
 /* LoginView -------------------- */
 
-/* DashboardView -------------------- */
+/* DashboardView ----------------- */
 .dashboard-container {
   min-height: 100vh;
   padding: 25px;
   padding-left: 45px;
   padding-right: 45px;
+}
+
+.dashboard-container > {
 }
 
 .bar-graph-group-item > img {
@@ -74,10 +78,13 @@ h2 {
 .bar-graph-group-item .progress {
   position: relative;
   top: -38px;
-  left: 25px;
-  border-radius: 25px;
+  left: 45px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
   background-color: var(--subtleGrey);
   box-shadow: 1px 1px 3px var(--lightShadow);
+  width: 90%;
+  height: 25px;
 }
 
 .bar-graph-group-item .progress-bar {
@@ -105,6 +112,6 @@ h2 {
 
 /* SearchView -------------------- */
 
-/* DoctorProfileView -------------------- */
+/* DoctorProfileView ------------- */
 
-/* Mobile -------------------- */
+/* Mobile ------------------------ */

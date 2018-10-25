@@ -1,15 +1,15 @@
 import React, { Component } from "react"
-import EvLogo from "../media/ev-logo.png"
 
 export default class NavigationBar extends Component {
   render() {
     return (
       <nav className="navbar sticky-top navbar-expand-md mr-auto navbar-light bg-light d-flex justify-content-between">
         <a className="navbar-brand" href="#">
-          <img src={EvLogo} height="30" alt="Envision Logo" />
+          <img src="/media/ev-logo.png" height="30" alt="Envision Logo" />
         </a>
         <div>
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 dropleft">
+            <li style={{ marginTop: "12%" }}> Welcome Leo!</li>
             <li className="nav-item dropdown">
               <a
                 className="nav-link dropdown-toggle "
@@ -21,7 +21,7 @@ export default class NavigationBar extends Component {
               >
                 <img
                   className="user-picture"
-                  src="https://www.toplist.pk/assets/images/circle1.png"
+                  src="/media/users/user1.jpg"
                   alt=""
                 />
               </a>
