@@ -4,11 +4,10 @@ import { BrowserRouter, Route, Switch } from "react-router-dom"
 import { Provider } from "./data/context"
 
 // Components
-import NotFound from "./Components/NotFound"
-import ThumbnailsView from "./Components/MainViews/ThumbnailsView"
-import ProductDetailsView from "./Components/MainViews/ProductDetailView"
+import LoginView from "./Components/LoginView"
 import NavigationBar from "./Components/NavigationBar"
-import CheckOutModal from "./Components/CheckOutModal"
+// import DashboardView from "./Component/DashboardView"
+// import NotFound from "./Components/NotFound"
 import "./css/styles.css"
 
 class Router extends Component {
@@ -16,17 +15,11 @@ class Router extends Component {
     return (
       <Provider>
         <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
-          <div className="main">
-            <CheckOutModal />
+          <div className="app">
             <NavigationBar />
             <Switch>
-              <Route exact path="/" component={ThumbnailsView} />
-              <Route
-                exact
-                path="/product-detail/:id"
-                component={ProductDetailsView}
-              />
-              <Route component={NotFound} />
+              <Route exact path="/" component={LoginView} />
+              {/* <Route component={NotFound} /> */}
             </Switch>
           </div>
         </BrowserRouter>
