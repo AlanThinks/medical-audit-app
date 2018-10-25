@@ -1,0 +1,45 @@
+/* Global Styles */
+
+body {
+  font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+    sans-serif;
+  background-color: grey;
+}
+.container {
+  background-color: white;
+  padding: 0;
+}
+
+/* NavigationBar */
+.dropdown-toggle::after,
+.dropleft .dropdown-toggle::before {
+  display: none;
+}
+
+.dropleft .dropdown-menu {
+  top: 95%;
+  right: 25%;
+}
+
+.navbar .user-picture {
+  height: 45px;
+  border-radius: 100%;
+  box-shadow: black 1px 1px 4px;
+}
+
+.dropdown-menu {
+  border: none;
+  box-shadow: rgb(160, 160, 160) 2px 2px 7px;
+  border-radius: 0.12rem;
+}
+/* LoginView */
+
+/* DashboardView */
+.dashboard-container {
+  min-height: 100vh;
+}
+/* SearchView */
+
+/* DoctorProfileView */
+
+/* Mobile */
