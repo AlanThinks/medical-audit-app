@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import WeeklyPerformanceGraphs from "./DashboardComps/WeeklyPerformanceGraphs"
+import WeeklyPerformanceGraphs from "./DashboardComps/WeeklyGraphs"
 import MyTasks from "./DashboardComps/MyTasks"
 import TeamSummary from "./DashboardComps/TeamSummary"
 import MyQueue from "./DashboardComps/MyQueue"

@@ -1,10 +1,18 @@
 /* Global -------------------- */
 :root {
   --black: black;
+  --charcoal: rgb(44, 44, 44);
   --shadow: rgb(160, 160, 160);
   --lightShadow: rgb(199, 199, 199);
   --darkBlue: rgb(0, 20, 46);
   --subtleGrey: rgb(235, 235, 235);
+  --taskBlue: rgb(235, 247, 255);
+  --taskGrey: rgb(241, 241, 241);
+}
+
+* {
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -20,6 +28,8 @@ h2 {
   font-weight: 300;
   font-size: 1.7rem;
   padding-bottom: 5px;
+  margin-top: 15px;
+  margin-bottom: 15px;
   border-bottom: 0.5px solid;
   border-bottom-color: var(--subtleGrey);
 }
@@ -59,14 +69,12 @@ h2 {
 /* DashboardView ----------------- */
 .dashboard-container {
   min-height: 100vh;
-  padding: 25px;
+  padding: 10px;
   padding-left: 45px;
   padding-right: 45px;
 }
 
-.dashboard-container > {
-}
-
+/* DashboardView -> WeeklyGraphs -- */
 .bar-graph-group-item > img {
   position: relative;
   height: 50px;
@@ -109,6 +117,58 @@ h2 {
 .bar-graph-group-item:nth-of-type(4) .progress-bar {
   background-color: rgb(235, 205, 197);
 }
+/* DashboardView -> MyTasks ------ */
+.my-tasks .all-tasks {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+.my-tasks .all-tasks .col-2 > .fas {
+  color: var(--charcoal);
+  font-size: 1.5rem;
+  position: relative;
+  top: 25%;
+  margin-right: 15px;
+  margin-left: 10px;
+  opacity: 0.55;
+}
+.my-tasks .all-tasks > .row {
+  height: 60px;
+  background-color: var(--taskGrey);
+  margin-bottom: 2px;
+  text-align: center;
+  padding: 5px;
+  font-size: 0.85em;
+  color: var(--black);
+  opacity: 0.75;
+  transition: all 0.2s;
+}
+.my-tasks .all-tasks > .row:hover {
+  opacity: 1;
+}
+.my-tasks .all-tasks > .row:nth-child(odd) {
+  background-color: var(--taskBlue);
+}
+
+.my-tasks .all-tasks > .row > p {
+  position: relative;
+  top: 25%;
+  opacity: 1;
+}
+
+.my-tasks .all-tasks button {
+  margin: auto;
+  opacity: 0.5;
+  font-size: 0.7rem;
+  width: 33%;
+  box-shadow: 1px 1px 4px var(--lightShadow);
+  border-radius: 2px;
+  transition: all 0.1s;
+}
+.my-tasks .all-tasks button:hover {
+  opacity: 0.9;
+}
+/* DashboardView -> TeamSummary -- */
+/* DashboardView -> MyQueue ------ */
 
 /* SearchView -------------------- */
 
