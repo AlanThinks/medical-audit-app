@@ -1,16 +1,37 @@
-/* Global Styles */
+/* Global -------------------- */
+:root {
+  --black: black;
+  --shadow: rgb(160, 160, 160);
+  --lightShadow: rgb(199, 199, 199);
+  --darkBlue: rgb(0, 20, 46);
+  --subtleGrey: rgb(235, 235, 235);
+}
 
 body {
   font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
-  background-color: grey;
+  background-color: lightgray;
+}
+
+h2 {
+  font-family: "Bai Jamjuree", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  color: var(--darkBlue);
+  font-weight: 300;
+  font-size: 1.7rem;
+  padding-bottom: 5px;
+  border-bottom: 0.5px solid;
+  border-bottom-color: var(--subtleGrey);
 }
 .container {
   background-color: white;
   padding: 0;
 }
 
-/* NavigationBar */
+/* NavigationBar -------------------- */
+.navbar {
+  box-shadow: var(--shadow) 0px 1px 4px;
+}
 .dropdown-toggle::after,
 .dropleft .dropdown-toggle::before {
   display: none;
@@ -24,22 +45,66 @@ body {
 .navbar .user-picture {
   height: 45px;
   border-radius: 100%;
-  box-shadow: black 1px 1px 4px;
+  box-shadow: var(--black) 1px 1px 4px;
 }
 
 .dropdown-menu {
   border: none;
-  box-shadow: rgb(160, 160, 160) 2px 2px 7px;
+  box-shadow: var(--shadow) 2px 2px 7px;
   border-radius: 0.12rem;
 }
-/* LoginView */
+/* LoginView -------------------- */
 
-/* DashboardView */
+/* DashboardView -------------------- */
 .dashboard-container {
   min-height: 100vh;
+  padding: 25px;
+  padding-left: 45px;
+  padding-right: 45px;
 }
-/* SearchView */
 
-/* DoctorProfileView */
+.bar-graph-group-item > img {
+  position: relative;
+  height: 50px;
+  z-index: 2;
+  border-radius: 100%;
+  box-shadow: 1px 1px 4px var(--shadow);
+}
 
-/* Mobile */
+.bar-graph-group-item .progress {
+  position: relative;
+  top: -38px;
+  left: 25px;
+  border-radius: 25px;
+  background-color: var(--subtleGrey);
+  box-shadow: 1px 1px 3px var(--lightShadow);
+}
+
+.bar-graph-group-item .progress-bar {
+  font-family: "Bai Jamjuree", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-weight: 600;
+  color: var(--darkBlue);
+  box-shadow: 1px 1px 3px var(--lightShadow);
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.bar-graph-group-item:nth-of-type(1) .progress-bar {
+  background-color: rgb(139, 218, 250);
+}
+.bar-graph-group-item:nth-of-type(2) .progress-bar {
+  background-color: rgb(157, 235, 224);
+}
+.bar-graph-group-item:nth-of-type(3) .progress-bar {
+  background-color: rgb(148, 207, 255);
+}
+.bar-graph-group-item:nth-of-type(4) .progress-bar {
+  background-color: rgb(235, 205, 197);
+}
+
+/* SearchView -------------------- */
+
+/* DoctorProfileView -------------------- */
+
+/* Mobile -------------------- */

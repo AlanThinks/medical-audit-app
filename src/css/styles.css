@@ -1,10 +1,6 @@
 /* Fonts */
-@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700");
-@import url("https://fonts.googleapis.com/css?family=Montserrat:300,400,700");
-/* PLUGIN CSS */
+@import url("https://fonts.googleapis.com/css?family=Bai+Jamjuree:300,600");
 
 /* MAIN CSS */
 @import url("./main.css");
-/* @import url("./typography.css");
-@import url("./colors.css");
-@import url("./responsiveness.css"); */
+/* @import url("./responsiveness.css"); */
