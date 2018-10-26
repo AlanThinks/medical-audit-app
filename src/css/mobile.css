@@ -1,0 +1,61 @@
+/* Mobile ------------------------ */
+
+@media screen and (max-width: 990px) {
+  /* DashboardView -> WeeklyPerformance */
+
+  .bar-graph-group-item > img {
+    height: 65px;
+  }
+  .bar-graph-group-item .progress {
+    top: -48px;
+    height: 30px;
+  }
+
+  .bar-graph-group-item .progress-bar {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  /* DashboardView -> TeamSummary */
+  .circ1,
+  .circ2,
+  .circ3 {
+    margin-left: 55%;
+    transform: translateX(-50%);
+  }
+  .summary h3 {
+    font-size: 1.4rem;
+    font-weight: 300;
+  }
+  .summary p {
+    font-size: 1.2rem;
+    font-weight: 300;
+  }
+  .summary div.c100 {
+    margin: 0px 0px 15px 0px;
+    margin-left: 50%;
+  }
+
+  .summary div.col-lg-4 {
+    border-bottom: 1px solid var(--subtleGrey);
+    padding-bottom: 25px;
+    margin-bottom: 15px;
+  }
+  .summary div.col-lg-4:last-of-type {
+    border-bottom: none;
+  }
+  .c100.big {
+    font-size: 200px;
+  }
+  .c100 span > img {
+    width: 135px;
+  }
+  .c100 span > img alt="placeholder alt text":hover {
+    width: 145px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .navbar-nav span {
+    display: none;
+  }
+}
