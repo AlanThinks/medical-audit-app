@@ -6,7 +6,11 @@ export default class NavigationBar extends Component {
     return (
       <nav className="navbar sticky-top navbar-expand-md mr-auto navbar-light bg-light d-flex justify-content-between">
         <Link className="navbar-brand" to="/">
-          <img src="/media/ev-logo.png" height="30" alt="Envision Logo" />
+          <img
+            src="http://alanthinks.com/projects/medical-audit-app/media/ev-logo.png"
+            height="30"
+            alt="Envision Logo"
+          />
         </Link>
         <div>
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0 dropleft">
@@ -20,7 +24,7 @@ export default class NavigationBar extends Component {
             >
               <img
                 className="user-picture"
-                src="/media/users/user1.jpg"
+                src="http://alanthinks.com/projects/medical-audit-app/media/users/user1.jpg"
                 alt=""
               />
             </li>
@@ -34,7 +38,7 @@ export default class NavigationBar extends Component {
               >
                 <img
                   className="user-picture"
-                  src="/media/users/user1.jpg"
+                  src="http://alanthinks.com/projects/medical-audit-app/media/users/user1.jpg"
                   alt=""
                 />
               </li> */}

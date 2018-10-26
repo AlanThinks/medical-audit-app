@@ -43,7 +43,9 @@ export default class CaseButton extends Component {
             >
               <div className="col-3">
                 <img
-                  src={`/media/specialties/${this.state.category}.png`}
+                  src={`http://alanthinks.com/projects/medical-audit-app/media/specialties/${
+                    this.state.category
+                  }.png`}
                   alt="Respiratory Symbol"
                 />
               </div>

@@ -14,7 +14,10 @@ export default class WeeklyPerformanceGraphs extends Component {
             <div className="col-lg-7 week-stats">
               <h2>Weekly Performance</h2>
               <div className="bar-graph-group-item">
-                <img alt="placeholder alt text" src="/media/users/user1.jpg" />
+                <img
+                  alt="placeholder alt text"
+                  src="http://alanthinks.com/projects/medical-audit-app/media/users/user1.jpg"
+                />
                 <div className="progress">
                   <div
                     className="progress-bar"
@@ -29,7 +32,10 @@ export default class WeeklyPerformanceGraphs extends Component {
                 </div>
               </div>
               <div className="bar-graph-group-item">
-                <img alt="placeholder alt text" src="/media/users/user2.jpg" />
+                <img
+                  alt="placeholder alt text"
+                  src="http://alanthinks.com/projects/medical-audit-app/media/users/user2.jpg"
+                />
                 <div className="progress">
                   <div
                     className="progress-bar"
@@ -44,7 +50,10 @@ export default class WeeklyPerformanceGraphs extends Component {
                 </div>
               </div>
               <div className="bar-graph-group-item">
-                <img alt="placeholder alt text" src="/media/users/user3.jpg" />
+                <img
+                  alt="placeholder alt text"
+                  src="http://alanthinks.com/projects/medical-audit-app/media/users/user3.jpg"
+                />
                 <div className="progress">
                   <div
                     className="progress-bar"
@@ -59,7 +68,10 @@ export default class WeeklyPerformanceGraphs extends Component {
                 </div>
               </div>
               <div className="bar-graph-group-item">
-                <img alt="placeholder alt text" src="/media/users/user4.jpg" />
+                <img
+                  alt="placeholder alt text"
+                  src="http://alanthinks.com/projects/medical-audit-app/media/users/user4.jpg"
+                />
                 <div className="progress">
                   <div
                     className="progress-bar"

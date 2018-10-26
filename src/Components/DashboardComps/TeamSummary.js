@@ -23,7 +23,9 @@ export default class TeamSummary extends Component {
                     <span>
                       <img
                         alt="This Week's Leader"
-                        src={`/media/users/${monthLeader.name}.jpg`}
+                        src={`http://alanthinks.com/projects/medical-audit-app/media/users/${
+                          monthLeader.name
+                        }.jpg`}
                       />
                     </span>
                     <div className="slice">
