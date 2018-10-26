@@ -2,39 +2,45 @@ import React, { Component } from "react"
 const Context = React.createContext()
 
 const reducer = (state, action) => {
-  const random2 = Math.ceil(Math.random() * 101)
-  const random3 = Math.ceil(Math.random() * 101)
-  const random4 = Math.ceil(Math.random() * 101)
-  const updatedUsers = [
-    { name: "user1", range: parseInt(action.payload) },
-    { name: "user2", range: random2 },
-    { name: "user3", range: random3 },
-    { name: "user4", range: random4 }
-  ]
+  switch (action.type) {
+    case `RANGE_UPDATE`:
+      const random2 = Math.ceil(Math.random() * 101)
+      const random3 = Math.ceil(Math.random() * 101)
+      const random4 = Math.ceil(Math.random() * 101)
+      const updatedUsers = [
+        { name: "user1", range: parseInt(action.payload) },
+        { name: "user2", range: random2 },
+        { name: "user3", range: random3 },
+        { name: "user4", range: random4 }
+      ]
 
-  let monthLeader = state.monthLeader
-  monthLeader.range = 0
-  let teamAverage = updatedUsers[0].range
-  for (let i = 0; i < updatedUsers.length; i++) {
-    if (updatedUsers[i].range >= monthLeader.range) {
-      monthLeader = updatedUsers[i]
-      teamAverage += updatedUsers[i].range
-    }
-  }
-  teamAverage = parseInt(teamAverage / updatedUsers.length)
-
-  if (action.payload)
-    switch (action.type) {
-      case `RANGE_UPDATE`:
-        return {
-          ...state,
-          users: [...updatedUsers],
-          monthLeader,
-          teamAverage
+      let monthLeader = state.monthLeader
+      monthLeader.range = 0
+      let teamAverage = updatedUsers[0].range
+      for (let i = 0; i < updatedUsers.length; i++) {
+        if (updatedUsers[i].range >= monthLeader.range) {
+          monthLeader = updatedUsers[i]
+          teamAverage += updatedUsers[i].range
         }
-      default:
-        return state
-    }
+      }
+      teamAverage = parseInt(teamAverage / updatedUsers.length)
+
+      return {
+        ...state,
+        users: [...updatedUsers],
+        monthLeader,
+        teamAverage
+      }
+
+    case `CASE_UPDATE`:
+      console.log(state.myQueue, action.payload)
+      let newQueue = state.myQueue
+      newQueue[2] = action.payload
+      return { ...state, myQueue: newQueue }
+
+    default:
+      return state
+  }
 }
 
 export class Provider extends Component {

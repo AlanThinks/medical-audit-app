@@ -2,16 +2,31 @@ import React, { Component } from "react"
 import { Consumer } from "../../context"
 
 export default class ModalSettings extends Component {
+  state = {
+    id: "88888",
+    numHospitals: 2,
+    category: "respiratory",
+    balance: 12,
+    isComplete: false
+  }
+
   updateRange1(e, dispatch) {
     dispatch({ type: "RANGE_UPDATE", payload: e.target.value })
+  }
+
+  updateCase(dispatch, state) {
+    dispatch({ type: "CASE_UPDATE", payload: state })
+  }
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
   }
   render() {
     return (
       <Consumer>
         {value => {
           const { dispatch } = value
+          const thirdCase = value.myQueue[2]
           const range = value.users[0].range
-          console.log(range)
           return (
             <div
               className="modal fade"
@@ -59,27 +74,25 @@ export default class ModalSettings extends Component {
                       className="custom-range"
                       id="customRange1"
                     />
-                    <h3>Modify Last case in "My Queue":</h3>
+                    {/* <h3>Modify third case in "My Queue":</h3>
                     <br />
                     <form>
                       <div className="form-group">
-                        <label htmlFor="exampleFormControlInput1">
-                          ID Number
-                        </label>
+                        <label htmlFor="idNumberInput">ID Number</label>
                         <input
                           className="form-control"
-                          id="exampleFormControlInput1"
-                          placeholder="012345"
+                          id="idNumberInput"
+                          name="id"
+                          value={this.state.id}
+                          placeholder={thirdCase.id}
+                          onChange={e => this.handleChange(e)}
                         />
                       </div>
                       <div className="form-group">
-                        <label htmlFor="exampleFormControlSelect1">
+                        <label htmlFor="specialtySelect">
                           Specialty (Image)
                         </label>
-                        <select
-                          className="form-control"
-                          id="exampleFormControlSelect1"
-                        >
+                        <select className="form-control" id="specialtySelect">
                           <option>Orthopedic</option>
                           <option>Dentist</option>
                           <option>Neurology</option>
@@ -88,13 +101,8 @@ export default class ModalSettings extends Component {
                         </select>
                       </div>
                       <div className="form-group">
-                        <label htmlFor="exampleFormControlSelect1">
-                          Number of Labels
-                        </label>
-                        <select
-                          className="form-control"
-                          id="exampleFormControlSelect1"
-                        >
+                        <label htmlFor="labelsSelect">Number of Labels</label>
+                        <select className="form-control" id="labelsSelect">
                           <option>1</option>
                           <option>2</option>
                           <option>3</option>
@@ -104,23 +112,24 @@ export default class ModalSettings extends Component {
                           <label htmlFor="balanceInput">Balance</label>
                           <input
                             className="form-control"
-                            id="exampleFormControlInput1"
-                            placeholder="5000.0"
+                            id="balanceInput"
+                            placeholder={this.state.balance}
                           />
                         </div>
                       </div>
-                    </form>
+                    </form> */}
                   </div>
 
-                  <div className="modal-footer">
+                  {/* <div className="modal-footer">
                     <button
                       type="button"
                       className="btn btn-primary disabled"
                       data-dismiss="modal"
+                      onClick={e => this.updateCase(dispatch, this.state)}
                     >
                       Update (Working on it now)
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

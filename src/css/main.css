@@ -117,6 +117,14 @@ h3 {
   font-size: 1.2rem;
   margin-bottom: 0;
 }
+
+.modal input,
+.modal select {
+  font-size: 0.9rem;
+  line-height: 1;
+  height: 2rem;
+  /* -webkit-appearance: none; */
+}
 /* LoginView -------------------- */
 
 /* DashboardView ----------------- */
