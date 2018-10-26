@@ -12,6 +12,15 @@ export default class CaseButton extends Component {
       isComplete: props.isComplete
     }
   }
+  deleteCase(e, dispatch) {
+    dispatch({ type: "DELETE_CASE", payload: this.state })
+  }
+
+  completeCase(e, dispatch) {
+    this.setState({ isComplete: !this.state.isComplete })
+    dispatch({ type: "CASE_UPDATE", payload: this.state })
+  }
+
   showBalance() {
     if (this.state.balance <= 0) {
       return ""
@@ -26,10 +35,6 @@ export default class CaseButton extends Component {
       )
     }
   }
-  complete(e, dispatch) {
-    this.setState({ isComplete: !this.state.isComplete })
-    dispatch({ type: "CASE_UPDATE", payload: this.state.isComplete })
-  }
   render() {
     return (
       <Consumer>
@@ -37,7 +42,7 @@ export default class CaseButton extends Component {
           const { hospitals, dispatch } = value
           return (
             <div
-              onClick={e => this.complete(e, dispatch)}
+              onClick={e => this.completeCase(e, dispatch)}
               className={`row btn-case ${
                 this.state.isComplete ? "complete" : ""
               }`}
@@ -53,7 +58,10 @@ export default class CaseButton extends Component {
               <div className="col pl-3">
                 <h3>#{this.state.id}</h3>
                 <i className="fas fa-check" />
-
+                <i
+                  onClick={e => this.deleteCase(e, dispatch)}
+                  className="fas fa-trash"
+                />
                 <div className="case-description">
                   <ul className="tags">
                     {hospitals

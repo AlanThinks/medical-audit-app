@@ -2,8 +2,6 @@ import React, { Component } from "react"
 const Context = React.createContext()
 
 const reducer = (state, action) => {
-  console.log(state.myQueue, action.payload)
-
   switch (action.type) {
     case `RANGE_UPDATE`:
       const random2 = Math.ceil(Math.random() * 101)
@@ -33,11 +31,15 @@ const reducer = (state, action) => {
         monthLeader,
         teamAverage
       }
+    case `DELETE_CASE`:
+      const updatedQueue = state.myQueue.filter(
+        caseObj => action.payload.id !== caseObj.id
+      )
 
-    case `CASE_UPDATE`:
-      let newQueue = state.myQueue
-      newQueue[2] = action.payload
-      return { ...state, myQueue: newQueue }
+      return {
+        ...state,
+        myQueue: updatedQueue
+      }
 
     default:
       return state
@@ -54,21 +56,21 @@ export class Provider extends Component {
     ],
     myQueue: [
       {
-        id: "90221",
+        id: 325314,
         numHospitals: 2,
         category: "respiratory",
         balance: 0,
         isComplete: false
       },
       {
-        id: "73221",
+        id: 674655,
         numHospitals: 4,
         category: "dentistry",
         balance: 12021.97,
         isComplete: false
       },
       {
-        id: "10034",
+        id: 105674,
         numHospitals: 3,
         category: "bones",
         balance: 0,

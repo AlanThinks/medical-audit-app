@@ -14,9 +14,9 @@ export default class ModalSettings extends Component {
     dispatch({ type: "RANGE_UPDATE", payload: e.target.value })
   }
 
-  updateCase(dispatch, updatedCase) {
-    dispatch({ type: "CASE_UPDATE", payload: updatedCase })
-  }
+  // updateCase(dispatch, updatedCase) {
+  //   dispatch({ type: "CASE_UPDATE", payload: updatedCase })
+  // }
   handleChange(e) {
     this.setState({ [e.target.name]: e.target.value })
   }
@@ -25,7 +25,6 @@ export default class ModalSettings extends Component {
       <Consumer>
         {value => {
           const { dispatch } = value
-          const thirdCase = value.myQueue[2]
           const range = value.users[0].range
           return (
             <div
@@ -84,7 +83,6 @@ export default class ModalSettings extends Component {
                           id="idNumberInput"
                           name="id"
                           value={this.state.id}
-                          placeholder={thirdCase.id}
                           onChange={e => this.handleChange(e)}
                         />
                       </div>

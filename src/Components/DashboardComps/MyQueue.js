@@ -11,14 +11,14 @@ export default class MyQueue extends Component {
           return (
             <div className="col-lg-5 my-queue">
               <h2>My Queue</h2>
-              {myQueue.map((eachCase, i) => (
+              {myQueue.map(caseItem => (
                 <CaseButton
-                  key={i}
-                  id={eachCase.id}
-                  numHospitals={eachCase.numHospitals}
-                  category={eachCase.category}
-                  balance={eachCase.balance}
-                  isComplete={eachCase.isComplete}
+                  key={caseItem.id}
+                  id={caseItem.id}
+                  numHospitals={caseItem.numHospitals}
+                  category={caseItem.category}
+                  balance={caseItem.balance}
+                  isComplete={caseItem.isComplete}
                 />
               ))}
             </div>

@@ -339,14 +339,33 @@ span.dot {
   letter-spacing: 1px;
   margin: 8px 0px 0px 0px;
 }
-.btn-case h3 + i {
+.btn-case .fas {
+  visibility: hidden;
+
+  opacity: 0;
+  transition: all 0.2;
+}
+.btn-case .fa-check {
+  position: absolute;
+  left: -3.8rem;
+  bottom: 1.3rem;
+  font-size: 3.5rem;
+  color: rgb(208, 250, 210);
+  text-shadow: 0px 0px 1px black;
+}
+.btn-case .fa-trash {
   position: absolute;
   right: 0.6rem;
   top: 0.6rem;
-  opacity: 0;
 }
-.btn-case.complete h3 + i {
+.btn-case .fa-trash:hover {
+  color: red;
+}
+
+.btn-case.complete .fas {
+  visibility: visible;
   opacity: 1;
+  transition: all 0.3s;
 }
 .case-description ul {
   margin: 0px 0px 8px 0px;
