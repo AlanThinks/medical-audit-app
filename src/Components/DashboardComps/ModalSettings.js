@@ -11,8 +11,6 @@ export default class ModalSettings extends Component {
     return (
       <Consumer>
         {value => {
-          // Data coming from 'vale' comes from the Provider in
-          // ./data/context.js
           const { range1, dispatch } = value
           return (
             <div
