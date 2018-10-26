@@ -3,7 +3,7 @@ import React, { Component } from "react"
 export default class WeeklyPerformanceGraphs extends Component {
   render() {
     return (
-      <div className="col-md-7 week-stats">
+      <div className="col-lg-7 week-stats">
         <h2>Weekly Performance</h2>
         <div className="bar-graph-group-item">
           <img src="/media/users/user1.jpg" />

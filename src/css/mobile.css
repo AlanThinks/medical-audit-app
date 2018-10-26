@@ -35,13 +35,15 @@
     margin-left: 50%;
   }
 
-  .summary div.col-lg-4 {
+  .summary div.col-4 {
     border-bottom: 1px solid var(--subtleGrey);
     padding-bottom: 25px;
     margin-bottom: 15px;
   }
-  .summary div.col-lg-4:last-of-type {
+  .summary div.col-4:last-of-type {
     border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
   }
   .c100.big {
     font-size: 200px;

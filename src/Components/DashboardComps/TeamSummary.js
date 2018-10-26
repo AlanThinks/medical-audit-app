@@ -3,10 +3,10 @@ import React, { Component } from "react"
 export default class TeamSummary extends Component {
   render() {
     return (
-      <div className="col-md-7 summary">
+      <div className="col-lg-7 summary">
         <h2>Team Summary</h2>
         <div className="row">
-          <div className="circ1 col">
+          <div className="circ1 col-4">
             <h3>October Leader</h3>
             <div class="circ1 c100 p85 big">
               <span>
@@ -30,7 +30,7 @@ export default class TeamSummary extends Component {
               Under Review
             </p>
           </div>
-          <div className="circ2 col">
+          <div className="circ2 col-4">
             <h3>Team Audits</h3>
             <div class="circ2 c100 p80 big">
               <span>70%</span>
@@ -53,7 +53,7 @@ export default class TeamSummary extends Component {
             </p>
           </div>
 
-          <div className="circ3 col">
+          <div className="circ3 col-4">
             <h3>Team Tasks</h3>
             <div class="circ3 c100 p20 big">
               <span>20%</span>
