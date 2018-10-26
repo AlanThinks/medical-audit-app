@@ -26,17 +26,18 @@ export default class CaseButton extends Component {
       )
     }
   }
-  complete(e) {
+  complete(e, dispatch) {
     this.setState({ isComplete: !this.state.isComplete })
+    dispatch({ type: "CASE_UPDATE", payload: this.state.isComplete })
   }
   render() {
     return (
       <Consumer>
         {value => {
-          const { hospitals } = value
+          const { hospitals, dispatch } = value
           return (
             <div
-              onClick={e => this.complete(e)}
+              onClick={e => this.complete(e, dispatch)}
               className={`row btn-case ${
                 this.state.isComplete ? "complete" : ""
               }`}
@@ -46,7 +47,7 @@ export default class CaseButton extends Component {
                   src={`http://alanthinks.com/projects/medical-audit-app/media/specialties/${
                     this.state.category
                   }.png`}
-                  alt="Respiratory Symbol"
+                  alt={`${this.state.category} symbol`}
                 />
               </div>
               <div className="col pl-3">

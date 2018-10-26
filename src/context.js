@@ -2,6 +2,8 @@ import React, { Component } from "react"
 const Context = React.createContext()
 
 const reducer = (state, action) => {
+  console.log(state.myQueue, action.payload)
+
   switch (action.type) {
     case `RANGE_UPDATE`:
       const random2 = Math.ceil(Math.random() * 101)
@@ -33,7 +35,6 @@ const reducer = (state, action) => {
       }
 
     case `CASE_UPDATE`:
-      console.log(state.myQueue, action.payload)
       let newQueue = state.myQueue
       newQueue[2] = action.payload
       return { ...state, myQueue: newQueue }
