@@ -1,6 +1,5 @@
 import React, { Component } from "react"
 import { Consumer } from "../../context"
-import MediaQuery from "react-responsive"
 
 export default class TeamSummary extends Component {
   render() {

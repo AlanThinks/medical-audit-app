@@ -8,12 +8,12 @@ export default class MyQueue extends Component {
       <Consumer>
         {value => {
           const { myQueue } = value
-          console.log(myQueue)
           return (
             <div className="col-lg-5 my-queue">
               <h2>My Queue</h2>
-              {myQueue.map(eachCase => (
+              {myQueue.map((eachCase, i) => (
                 <CaseButton
+                  key={i}
                   id={eachCase.id}
                   numHospitals={eachCase.numHospitals}
                   category={eachCase.category}

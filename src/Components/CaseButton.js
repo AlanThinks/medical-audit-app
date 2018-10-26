@@ -55,9 +55,11 @@ export default class CaseButton extends Component {
 
                 <div className="case-description">
                   <ul className="tags">
-                    {hospitals.slice(0, this.state.numHospitals).map(name => (
-                      <li>{name}</li>
-                    ))}
+                    {hospitals
+                      .slice(0, this.state.numHospitals)
+                      .map((name, i) => (
+                        <li key={i}>{name}</li>
+                      ))}
                   </ul>
                   {this.showBalance()}
                 </div>
