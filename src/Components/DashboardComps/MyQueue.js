@@ -10,7 +10,7 @@ export default class MyQueue extends Component {
           const { myQueue } = value
           console.log(myQueue)
           return (
-            <div className="col my-queue">
+            <div className="col-lg-5 my-queue">
               <h2>My Queue</h2>
               {myQueue.map(eachCase => (
                 <CaseButton
