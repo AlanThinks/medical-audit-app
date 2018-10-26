@@ -15,6 +15,9 @@
   --circ2Dark: #66bcd1;
   --circ3Light: #faefd8;
   --circ3Dark: #ffe2ab;
+  --circ4Light: rgb(210, 255, 210);
+  --offBalanceBg: rgb(255, 223, 223);
+  --offBalanceTxt: rgb(231, 111, 111);
 }
 
 * {
@@ -249,26 +252,88 @@ dot {
 /* DashboardView -> MyQueue ------ */
 .btn-case {
   background-color: var(--taskGrey);
-  width: 300px;
+  width: 325px;
   margin: auto;
+  min-height: 100px;
   margin-bottom: 12px;
   box-shadow: 3px 3px 4px var(--lightShadow);
   transition: all 0.2s;
   cursor: pointer;
 }
 
+.btn-case.complete {
+  opacity: 0.55;
+}
+.btn-case.complete:hover {
+  opacity: 0.85;
+}
+.btn-case.complete img {
+  -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+  filter: grayscale(100%);
+}
+.btn-case.complete .case-description > ul.tags li {
+  background-color: var(--lightShadow);
+}
 .btn-case:hover {
   box-shadow: 1px 1px 2px var(--lightShadow);
   background-color: var(--taskGreyHover);
 }
 
 .btn-case img {
-  height: 60px;
-  margin-top: 15px;
-  margin-bottom: 15px;
+  position: relative;
+  top: 50%;
+  left: 65%;
+  transform: translate(-50%, -50%);
+  height: 75px;
+  padding: 7px 5px 7px 5px;
+  box-sizing: content-box;
 }
 .btn-case h3 {
   font-size: 1.2rem;
+  letter-spacing: 1px;
+  margin: 8px 0px 0px 0px;
+}
+.btn-case h3 + i {
+  position: absolute;
+  right: 0.6rem;
+  top: 0.6rem;
+  opacity: 0;
+}
+.btn-case.complete h3 + i {
+  opacity: 1;
+}
+.case-description ul {
+  margin: 0px 0px 8px 0px;
+}
+.case-description > ul.tags li {
+  display: inline-block;
+  font-size: 0.75rem;
+  padding: 0px 5px 0px 5px;
+  margin: 0px 2px 0px 2px;
+  background-color: var(--circ1Light);
+}
+.case-description > ul li:nth-child(2) {
+  background-color: var(--circ2Light);
+}
+.case-description > ul li:nth-child(3) {
+  background-color: var(--circ3Light);
+}
+.case-description > ul li:nth-child(4) {
+  background-color: var(--circ4Light);
+}
+
+.case-description .balance {
+  font-size: 0.8rem;
+  float: right;
+  margin: 0px 0px 9px 0px;
+}
+
+.case-description .balance > span {
+  background-color: var(--offBalanceBg);
+  padding: 2px 3px 2px 3px;
+  border-radius: 3px;
+  color: var(--offBalanceTxt);
+  font-weight: 500;
 }
 /* SearchView -------------------- */
 
