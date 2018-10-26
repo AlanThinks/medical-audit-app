@@ -1,0 +1,190 @@
+/* Circle 1 */
+.circ1.c100 {
+  background-color: #d5d1f8;
+}
+.circ1.c100:hover > span {
+  color: #7166d1;
+}
+
+.pie,
+.circ1.c100 .bar,
+.circ1.c100.p51 .fill,
+.circ1.c100.p52 .fill,
+.circ1.c100.p53 .fill,
+.circ1.c100.p54 .fill,
+.circ1.c100.p55 .fill,
+.circ1.c100.p56 .fill,
+.circ1.c100.p57 .fill,
+.circ1.c100.p58 .fill,
+.circ1.c100.p59 .fill,
+.circ1.c100.p60 .fill,
+.circ1.c100.p61 .fill,
+.circ1.c100.p62 .fill,
+.circ1.c100.p63 .fill,
+.circ1.c100.p64 .fill,
+.circ1.c100.p65 .fill,
+.circ1.c100.p66 .fill,
+.circ1.c100.p67 .fill,
+.circ1.c100.p68 .fill,
+.circ1.c100.p69 .fill,
+.circ1.c100.p70 .fill,
+.circ1.c100.p71 .fill,
+.circ1.c100.p72 .fill,
+.circ1.c100.p73 .fill,
+.circ1.c100.p74 .fill,
+.circ1.c100.p75 .fill,
+.circ1.c100.p76 .fill,
+.circ1.c100.p77 .fill,
+.circ1.c100.p78 .fill,
+.circ1.c100.p79 .fill,
+.circ1.c100.p80 .fill,
+.circ1.c100.p81 .fill,
+.circ1.c100.p82 .fill,
+.circ1.c100.p83 .fill,
+.circ1.c100.p84 .fill,
+.circ1.c100.p85 .fill,
+.circ1.c100.p86 .fill,
+.circ1.c100.p87 .fill,
+.circ1.c100.p88 .fill,
+.circ1.c100.p89 .fill,
+.circ1.c100.p90 .fill,
+.circ1.c100.p91 .fill,
+.circ1.c100.p92 .fill,
+.circ1.c100.p93 .fill,
+.circ1.c100.p94 .fill,
+.circ1.c100.p95 .fill,
+.circ1.c100.p96 .fill,
+.circ1.c100.p97 .fill,
+.circ1.c100.p98 .fill,
+.circ1.c100.p99 .fill,
+.circ1.c100.p100 .fill {
+  border: 0.08em solid #7166d1;
+  transition: all 0.5s;
+}
+
+/* Circle 2 */
+.circ2.c100 {
+  background-color: #ccebf3;
+}
+.circ2.c100:hover > span {
+  color: #66bcd1;
+}
+
+.pie,
+.circ2.c100 .bar,
+.circ2.c100.p51 .fill,
+.circ2.c100.p52 .fill,
+.circ2.c100.p53 .fill,
+.circ2.c100.p54 .fill,
+.circ2.c100.p55 .fill,
+.circ2.c100.p56 .fill,
+.circ2.c100.p57 .fill,
+.circ2.c100.p58 .fill,
+.circ2.c100.p59 .fill,
+.circ2.c100.p60 .fill,
+.circ2.c100.p61 .fill,
+.circ2.c100.p62 .fill,
+.circ2.c100.p63 .fill,
+.circ2.c100.p64 .fill,
+.circ2.c100.p65 .fill,
+.circ2.c100.p66 .fill,
+.circ2.c100.p67 .fill,
+.circ2.c100.p68 .fill,
+.circ2.c100.p69 .fill,
+.circ2.c100.p70 .fill,
+.circ2.c100.p71 .fill,
+.circ2.c100.p72 .fill,
+.circ2.c100.p73 .fill,
+.circ2.c100.p74 .fill,
+.circ2.c100.p75 .fill,
+.circ2.c100.p76 .fill,
+.circ2.c100.p77 .fill,
+.circ2.c100.p78 .fill,
+.circ2.c100.p79 .fill,
+.circ2.c100.p80 .fill,
+.circ2.c100.p81 .fill,
+.circ2.c100.p82 .fill,
+.circ2.c100.p83 .fill,
+.circ2.c100.p84 .fill,
+.circ2.c100.p85 .fill,
+.circ2.c100.p86 .fill,
+.circ2.c100.p87 .fill,
+.circ2.c100.p88 .fill,
+.circ2.c100.p89 .fill,
+.circ2.c100.p90 .fill,
+.circ2.c100.p91 .fill,
+.circ2.c100.p92 .fill,
+.circ2.c100.p93 .fill,
+.circ2.c100.p94 .fill,
+.circ2.c100.p95 .fill,
+.circ2.c100.p96 .fill,
+.circ2.c100.p97 .fill,
+.circ2.c100.p98 .fill,
+.circ2.c100.p99 .fill,
+.circ2.c100.p100 .fill {
+  border: 0.08em solid #66bcd1;
+  transition: all 0.5s;
+}
+/* Circle 3 */
+.circ3.c100 {
+  background-color: #faefd8;
+}
+.circ3.c100:hover > span {
+  color: #ffe2ab;
+}
+
+.pie,
+.circ3.c100 .bar,
+.circ3.c100.p51 .fill,
+.circ3.c100.p52 .fill,
+.circ3.c100.p53 .fill,
+.circ3.c100.p54 .fill,
+.circ3.c100.p55 .fill,
+.circ3.c100.p56 .fill,
+.circ3.c100.p57 .fill,
+.circ3.c100.p58 .fill,
+.circ3.c100.p59 .fill,
+.circ3.c100.p60 .fill,
+.circ3.c100.p61 .fill,
+.circ3.c100.p62 .fill,
+.circ3.c100.p63 .fill,
+.circ3.c100.p64 .fill,
+.circ3.c100.p65 .fill,
+.circ3.c100.p66 .fill,
+.circ3.c100.p67 .fill,
+.circ3.c100.p68 .fill,
+.circ3.c100.p69 .fill,
+.circ3.c100.p70 .fill,
+.circ3.c100.p71 .fill,
+.circ3.c100.p72 .fill,
+.circ3.c100.p73 .fill,
+.circ3.c100.p74 .fill,
+.circ3.c100.p75 .fill,
+.circ3.c100.p76 .fill,
+.circ3.c100.p77 .fill,
+.circ3.c100.p78 .fill,
+.circ3.c100.p79 .fill,
+.circ3.c100.p80 .fill,
+.circ3.c100.p81 .fill,
+.circ3.c100.p82 .fill,
+.circ3.c100.p83 .fill,
+.circ3.c100.p84 .fill,
+.circ3.c100.p85 .fill,
+.circ3.c100.p86 .fill,
+.circ3.c100.p87 .fill,
+.circ3.c100.p88 .fill,
+.circ3.c100.p89 .fill,
+.circ3.c100.p90 .fill,
+.circ3.c100.p91 .fill,
+.circ3.c100.p92 .fill,
+.circ3.c100.p93 .fill,
+.circ3.c100.p94 .fill,
+.circ3.c100.p95 .fill,
+.circ3.c100.p96 .fill,
+.circ3.c100.p97 .fill,
+.circ3.c100.p98 .fill,
+.circ3.c100.p99 .fill,
+.circ3.c100.p100 .fill {
+  border: 0.08em solid #ffd88f;
+  transition: all 0.5s;
+}
