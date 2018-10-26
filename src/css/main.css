@@ -8,6 +8,7 @@
   --subtleGrey: rgb(235, 235, 235);
   --taskBlue: rgb(235, 247, 255);
   --taskGrey: rgb(241, 241, 241);
+  --taskGreyHover: rgb(235, 235, 235);
   --circ1Light: #d5d1f8;
   --circ1Dark: #7166d1;
   --circ2Light: #ccebf3;
@@ -246,7 +247,29 @@ dot {
   background-color: var(--circ3Light);
 }
 /* DashboardView -> MyQueue ------ */
+.btn-case {
+  background-color: var(--taskGrey);
+  width: 300px;
+  margin: auto;
+  margin-bottom: 12px;
+  box-shadow: 3px 3px 4px var(--lightShadow);
+  transition: all 0.2s;
+  cursor: pointer;
+}
 
+.btn-case:hover {
+  box-shadow: 1px 1px 2px var(--lightShadow);
+  background-color: var(--taskGreyHover);
+}
+
+.btn-case img {
+  height: 60px;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.btn-case h3 {
+  font-size: 1.2rem;
+}
 /* SearchView -------------------- */
 
 /* DoctorProfileView ------------- */
