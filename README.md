@@ -665,7 +665,7 @@ console.log(logo); // /logo.84287d09.png
 
 function Header() {
   // Import result is the URL of your image
-  return <img src={logo} alt="Logo" />;
+  return <img alt="placeholder alt text" src={logo} alt="Logo" />;
 }
 
 export default Header;
@@ -748,7 +748,7 @@ render() {
   // Note: this is an escape hatch and should be used sparingly!
   // Normally we recommend using `import` for getting asset URLs
   // as described in “Adding Images and Fonts” above this section.
-  return <img src={process.env.PUBLIC_URL + '/img/logo.png'} />;
+  return <img alt="placeholder alt text" src={process.env.PUBLIC_URL + '/img/logo.png'} />;
 }
 ```
 
@@ -2315,7 +2315,7 @@ npm run deploy
 
 Finally, make sure **GitHub Pages** option in your GitHub project settings is set to use the `gh-pages` branch:
 
-<img src="http://i.imgur.com/HUjEr9l.png" width="500" alt="gh-pages branch setting">
+<img alt="placeholder alt text" src="http://i.imgur.com/HUjEr9l.png" width="500" alt="gh-pages branch setting">
 
 #### Step 5: Optionally, configure the domain
 

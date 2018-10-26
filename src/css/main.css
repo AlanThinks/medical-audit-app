@@ -6,6 +6,11 @@
   --lightShadow: rgb(199, 199, 199);
   --darkBlue: rgb(0, 20, 46);
   --subtleGrey: rgb(235, 235, 235);
+  --primary: rgb(148, 207, 255);
+  --bar75: rgb(139, 218, 250);
+  --bar81: rgb(157, 235, 224);
+  --bar65: rgb(148, 207, 255);
+  --bar34: rgb(235, 205, 197);
   --taskBlue: rgb(235, 247, 255);
   --taskGrey: rgb(241, 241, 241);
   --taskGreyHover: rgb(235, 235, 235);
@@ -24,7 +29,11 @@
   margin: 0;
   padding: 0;
 }
-
+a,
+a:hover {
+  color: inherit;
+  text-decoration: none;
+}
 body {
   font-family: "Roboto", "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
     sans-serif;
@@ -75,13 +84,30 @@ h3 {
 .navbar .user-picture {
   height: 45px;
   border-radius: 100%;
-  box-shadow: var(--black) 1px 1px 4px;
+  box-shadow: var(--charcoal) 1px 1px 4px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.navbar .user-picture:hover {
+  box-shadow: var(--charcoal) 1px 1px 8px;
+  border: 1px solid var(--white);
 }
 
 .dropdown-menu {
   border: none;
   box-shadow: var(--shadow) 2px 2px 7px;
   border-radius: 0.12rem;
+}
+/* NavigationBar -> ModalSettings */
+.modal-content {
+  border-radius: 2px;
+  border: none;
+}
+.modal button.btn-primary {
+  border-radius: 2px;
+  background-color: var(--primary);
+  border-color: var(--primary);
+  color: var(--darkBlue);
 }
 
 /* LoginView -------------------- */
@@ -126,16 +152,16 @@ h3 {
 }
 
 .bar-graph-group-item:nth-of-type(1) .progress-bar {
-  background-color: rgb(139, 218, 250);
+  background-color: var(--bar75);
 }
 .bar-graph-group-item:nth-of-type(2) .progress-bar {
-  background-color: rgb(157, 235, 224);
+  background-color: var(--bar81);
 }
 .bar-graph-group-item:nth-of-type(3) .progress-bar {
-  background-color: rgb(148, 207, 255);
+  background-color: var(--bar65);
 }
 .bar-graph-group-item:nth-of-type(4) .progress-bar {
-  background-color: rgb(235, 205, 197);
+  background-color: var(--bar34);
 }
 /* DashboardView -> MyTasks ------ */
 .my-tasks .all-tasks {
@@ -218,7 +244,7 @@ h3 {
   font-size: 0.85rem;
   color: var(--charcoal);
 }
-dot {
+span.dot {
   height: 10px;
   width: 10px;
   border-radius: 50%;
@@ -226,27 +252,27 @@ dot {
   margin-right: 10px;
 }
 
-.circ1 dot {
+.circ1 span.dot {
   background-color: var(--circ1Dark);
 }
 
-.circ1 p:nth-child(even) dot {
+.circ1 p:nth-child(even) span.dot {
   background-color: var(--circ1Light);
 }
 
-.circ2 dot {
+.circ2 span.dot {
   background-color: var(--circ2Dark);
 }
 
-.circ2 p:nth-child(even) dot {
+.circ2 p:nth-child(even) span.dot {
   background-color: var(--circ2Light);
 }
 
-.circ3 dot {
+.circ3 span.dot {
   background-color: var(--circ3Dark);
 }
 
-.circ3 p:nth-child(even) dot {
+.circ3 p:nth-child(even) span.dot {
   background-color: var(--circ3Light);
 }
 /* DashboardView -> MyQueue ------ */
@@ -335,7 +361,13 @@ dot {
   color: var(--offBalanceTxt);
   font-weight: 500;
 }
-/* SearchView -------------------- */
+/* CaseSearchView -------------------- */
+.casesearch-container {
+  min-height: 100vh;
+  padding: 10px;
+  padding-left: 45px;
+  padding-right: 45px;
+}
 
 /* DoctorProfileView ------------- */
 

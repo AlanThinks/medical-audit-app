@@ -14,13 +14,13 @@ export default class MyTasks extends Component {
           </div>
           <div className="row">
             <div className="col-2">
-              <i class="fas fa-question-circle" />
+              <i className="fas fa-question-circle" />
             </div>
             <p>Call Doctor Smith about Invoice #3434223</p>
           </div>
           <div className="row">
             <div className="col-2">
-              <i class="fas fa-smile-beam" />
+              <i className="fas fa-smile-beam" />
             </div>
             <p>Follow Up with Mr. Smith at Memorial West</p>
           </div>
