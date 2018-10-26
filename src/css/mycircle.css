@@ -1,9 +1,9 @@
 /* Circle 1 */
 .circ1.c100 {
-  background-color: #d5d1f8;
+  background-color: var(--circ1Light);
 }
 .circ1.c100:hover > span {
-  color: #7166d1;
+  color: var(--circ1Dark);
 }
 
 .pie,
@@ -58,16 +58,16 @@
 .circ1.c100.p98 .fill,
 .circ1.c100.p99 .fill,
 .circ1.c100.p100 .fill {
-  border: 0.08em solid #7166d1;
+  border: 0.08em solid var(--circ1Dark);
   transition: all 0.5s;
 }
 
 /* Circle 2 */
 .circ2.c100 {
-  background-color: #ccebf3;
+  background-color: var(--circ2Light);
 }
 .circ2.c100:hover > span {
-  color: #66bcd1;
+  color: var(--circ2Dark);
 }
 
 .pie,
@@ -122,15 +122,15 @@
 .circ2.c100.p98 .fill,
 .circ2.c100.p99 .fill,
 .circ2.c100.p100 .fill {
-  border: 0.08em solid #66bcd1;
+  border: 0.08em solid var(--circ2Dark);
   transition: all 0.5s;
 }
 /* Circle 3 */
 .circ3.c100 {
-  background-color: #faefd8;
+  background-color: var(--circ3Light);
 }
 .circ3.c100:hover > span {
-  color: #ffe2ab;
+  color: var(--circ3Dark);
 }
 
 .pie,

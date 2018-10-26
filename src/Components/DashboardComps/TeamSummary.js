@@ -3,22 +3,34 @@ import React, { Component } from "react"
 export default class TeamSummary extends Component {
   render() {
     return (
-      <div className="col-7 summary">
+      <div className="col-md-7 summary">
         <h2>Team Summary</h2>
         <div className="row">
-          <div className="col">
+          <div className="circ1 col">
             <h3>October Leader</h3>
             <div class="circ1 c100 p85 big">
               <span>
-                <img src="/media/users/user2.jpg" />
+                <img alt="This Week's Leader" src="/media/users/user2.jpg" />
               </span>
               <div class="slice">
                 <div class="bar" />
                 <div class="fill" />
               </div>
             </div>
+            <p>
+              <dot />
+              Completed
+            </p>
+            <p>
+              <dot />
+              In Progress
+            </p>
+            <p>
+              <dot />
+              Under Review
+            </p>
           </div>
-          <div className="col">
+          <div className="circ2 col">
             <h3>Team Audits</h3>
             <div class="circ2 c100 p80 big">
               <span>70%</span>
@@ -27,8 +39,21 @@ export default class TeamSummary extends Component {
                 <div class="fill" />
               </div>
             </div>
+            <p>
+              <dot />
+              Completed
+            </p>
+            <p>
+              <dot />
+              In Progress
+            </p>
+            <p>
+              <dot />
+              Under Review
+            </p>
           </div>
-          <div className="col">
+
+          <div className="circ3 col">
             <h3>Team Tasks</h3>
             <div class="circ3 c100 p20 big">
               <span>20%</span>
@@ -37,6 +62,18 @@ export default class TeamSummary extends Component {
                 <div class="fill" />
               </div>
             </div>
+            <p>
+              <dot />
+              Follow-Ups
+            </p>
+            <p>
+              <dot />
+              Corrections
+            </p>
+            <p>
+              <dot />
+              Verifications
+            </p>
           </div>
         </div>
       </div>
