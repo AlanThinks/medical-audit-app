@@ -3,8 +3,6 @@ import { Consumer } from "../../context"
 
 export default class ModalSettings extends Component {
   updateRange1(e, dispatch) {
-    // Using React's Context API to dispatch this action which
-    // track if the modal should be open/closes in the Provider
     dispatch({ type: "RANGE_UPDATE", payload: e.target.value })
   }
   render() {
@@ -60,6 +58,7 @@ export default class ModalSettings extends Component {
                       id="customRange1"
                     />
                   </div>
+
                   {/* <div className="modal-footer">
                     <button
                       type="button"
