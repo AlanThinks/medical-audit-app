@@ -6,7 +6,10 @@ export default class WeeklyPerformanceGraphs extends Component {
     return (
       <Consumer>
         {value => {
-          const { range1 } = value
+          const user1 = value.users[0]
+          const user2 = value.users[1]
+          const user3 = value.users[2]
+          const user4 = value.users[3]
           return (
             <div className="col-lg-7 week-stats">
               <h2>Weekly Performance</h2>
@@ -16,12 +19,12 @@ export default class WeeklyPerformanceGraphs extends Component {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    style={{ width: range1.toString() + "%" }}
-                    aria-valuenow={range1}
+                    style={{ width: user1.range.toString() + "%" }}
+                    aria-valuenow={user1.range}
                     aria-valuemin="0"
                     aria-valuemax="100"
                   >
-                    75%
+                    {user1.range < 7 ? "" : user1.range.toString() + "%"}{" "}
                   </div>
                 </div>
               </div>
@@ -31,12 +34,12 @@ export default class WeeklyPerformanceGraphs extends Component {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    style={{ width: "81%" }}
-                    aria-valuenow="81"
+                    style={{ width: user2.range.toString() + "%" }}
+                    aria-valuenow={user2.range}
                     aria-valuemin="0"
                     aria-valuemax="100"
                   >
-                    81%
+                    {user2.range < 7 ? "" : user2.range.toString() + "%"}{" "}
                   </div>
                 </div>
               </div>
@@ -46,12 +49,12 @@ export default class WeeklyPerformanceGraphs extends Component {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    style={{ width: "65%" }}
-                    aria-valuenow="65"
+                    style={{ width: user3.range.toString() + "%" }}
+                    aria-valuenow={user3.range}
                     aria-valuemin="0"
                     aria-valuemax="100"
                   >
-                    65%
+                    {user3.range < 7 ? "" : user3.range.toString() + "%"}{" "}
                   </div>
                 </div>
               </div>
@@ -61,12 +64,12 @@ export default class WeeklyPerformanceGraphs extends Component {
                   <div
                     className="progress-bar"
                     role="progressbar"
-                    style={{ width: "34%" }}
-                    aria-valuenow="34"
+                    style={{ width: user4.range.toString() + "%" }}
+                    aria-valuenow={user4.range}
                     aria-valuemin="0"
                     aria-valuemax="100"
                   >
-                    34%
+                    {user4.range < 7 ? "" : user4.range.toString() + "%"}
                   </div>
                 </div>
               </div>

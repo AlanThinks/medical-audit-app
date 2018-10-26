@@ -8,12 +8,14 @@
   }
   .bar-graph-group-item .progress {
     top: -48px;
+    left: 61px;
     height: 30px;
   }
 
   .bar-graph-group-item .progress-bar {
     font-size: 1.2rem;
     font-weight: 400;
+    padding-left: 5px;
   }
 
   /* DashboardView -> MyTasks */

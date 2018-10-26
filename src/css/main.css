@@ -98,10 +98,13 @@ h3 {
   box-shadow: var(--shadow) 2px 2px 7px;
   border-radius: 0.12rem;
 }
+
 /* NavigationBar -> ModalSettings */
+
 .modal-content {
   border-radius: 2px;
   border: none;
+  box-shadow: 5px 5px 20px var(--shadow);
 }
 .modal button.btn-primary {
   border-radius: 2px;
@@ -109,7 +112,11 @@ h3 {
   border-color: var(--primary);
   color: var(--darkBlue);
 }
-
+.modal-body h3 {
+  font-weight: 600;
+  font-size: 1.2rem;
+  margin-bottom: 0;
+}
 /* LoginView -------------------- */
 
 /* DashboardView ----------------- */
@@ -132,7 +139,7 @@ h3 {
 .bar-graph-group-item .progress {
   position: relative;
   top: -38px;
-  left: 45px;
+  left: 46px;
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   background-color: var(--subtleGrey);
@@ -300,6 +307,11 @@ span.dot {
 .btn-case.complete .case-description > ul.tags li {
   background-color: var(--lightShadow);
 }
+.btn-case.complete .balance > span {
+  background-color: var(--lightShadow);
+  color: var(--charcoal);
+}
+
 .btn-case:hover {
   box-shadow: 1px 1px 2px var(--lightShadow);
   background-color: var(--taskGreyHover);

@@ -15,7 +15,7 @@ class Router extends Component {
   render() {
     return (
       <Provider>
-        <BrowserRouter>
+        <BrowserRouter basename={`${process.env.PUBLIC_URL}`}>
           <div className="container">
             <ModalSettings />
             <NavigationBar />

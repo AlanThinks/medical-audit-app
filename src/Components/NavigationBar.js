@@ -16,6 +16,7 @@ export default class NavigationBar extends Component {
               className="nav-link"
               data-toggle="modal"
               data-target="#modalSettings"
+              data-backdrop="false"
             >
               <img
                 className="user-picture"

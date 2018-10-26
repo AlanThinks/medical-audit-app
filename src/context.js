@@ -2,78 +2,80 @@ import React, { Component } from "react"
 const Context = React.createContext()
 
 const reducer = (state, action) => {
-  switch (action.type) {
-    case `RANGE1_UPDATE`:
-      return {
-        ...state,
-        range1: action.payload
-      }
-    default:
-      return state
-  }
-}
+  const random2 = Math.ceil(Math.random() * 101)
+  const random3 = Math.ceil(Math.random() * 101)
+  const random4 = Math.ceil(Math.random() * 101)
+  const updatedUsers = [
+    { name: "user1", range: parseInt(action.payload) },
+    { name: "user2", range: random2 },
+    { name: "user3", range: random3 },
+    { name: "user4", range: random4 }
+  ]
 
-//   switch (action.type) {
-//     case `ADD_TO_CART`:
-//       const newItem = state.items.filter(
-//         item => action.payload === item.ProductID
-//       )[0]
-//       const updatedItems = state.items.map(function(item) {
-//         if (action.payload === item.ProductID) {
-//           return { ...item, OnHandQuantity: item.OnHandQuantity - 1 }
-//         }
-//         return item
-//       })
-//       return {
-//         ...state,
-//         items: updatedItems,
-//         cart: [newItem, ...state.cart]
-//       }
-//     case `REMOVE_FROM_CART`:
-//       const returnedItem = state.cart.filter(
-//         (item, i) => action.payload === i
-//       )[0]
-//       const updatedInventory = state.items.map(function(item) {
-//         if (item.ProductID === returnedItem.ProductID) {
-//           return { ...item, OnHandQuantity: item.OnHandQuantity + 1 }
-//         }
-//         return item
-//       })
-//       return {
-//         ...state,
-//         items: updatedInventory,
-//         cart: state.cart.filter((item, i) => action.payload !== i)
-//       }
-//     case `CLEAR_CART`:
-//       return {
-//         ...state,
-//         cart: []
-//       }
-//     case `CHECKOUT_MODAL`:
-//       return {
-//         ...state,
-//         checkOutModal: action.payload
-//       }
-//     case `PRODUCT_MODAL`:
-//       return {
-//         ...state,
-//         productModal: action.payload
-//       }
-//     // case `UPDATE_ITEM`:
-//     //   return {
-//     //     ...state,
-//     //     cart: state.cart.map(
-//     //       item => (action.payload === item.ProductID ? item : action.payload)
-//     //     )
-//     //   }
+  let monthLeader = state.monthLeader
+  monthLeader.range = 0
+  let teamAverage = updatedUsers[0].range
+  for (let i = 0; i < updatedUsers.length; i++) {
+    if (updatedUsers[i].range >= monthLeader.range) {
+      monthLeader = updatedUsers[i]
+      teamAverage += updatedUsers[i].range
+    }
+  }
+  teamAverage = parseInt(teamAverage / updatedUsers.length)
+
+  if (action.payload)
+    switch (action.type) {
+      case `RANGE_UPDATE`:
+        return {
+          ...state,
+          users: [...updatedUsers],
+          monthLeader,
+          teamAverage
+        }
+      default:
+        return state
+    }
+}
 
 export class Provider extends Component {
   state = {
-    range1: 75,
-    checkOutModal: false,
-    productModal: false,
-    cropUnt: 300,
-    cropAmount: "6,6,294,294",
+    users: [
+      { name: "user1", range: 75 },
+      { name: "user2", range: 81 },
+      { name: "user3", range: 65 },
+      { name: "user4", range: 34 }
+    ],
+    myQueue: [
+      {
+        id: "90221",
+        numHospitals: 2,
+        category: "respiratory",
+        balance: 0,
+        isComplete: false
+      },
+      {
+        id: "73221",
+        numHospitals: 4,
+        category: "dentistry",
+        balance: 12021.97,
+        isComplete: false
+      },
+      {
+        id: "10034",
+        numHospitals: 3,
+        category: "bones",
+        balance: 0,
+        isComplete: true
+      }
+    ],
+    monthLeader: { name: "user2", range: 75 },
+    teamAverage: 64,
+    hospitals: [
+      "Princeton Hospital",
+      "Memorial West",
+      "Radiology",
+      "Emergency"
+    ],
     dispatch: action => this.setState(state => reducer(state, action))
   }
 
