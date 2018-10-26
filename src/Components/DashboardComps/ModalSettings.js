@@ -73,7 +73,7 @@ export default class ModalSettings extends Component {
                       className="custom-range"
                       id="customRange1"
                     />
-                    <h3>Modify third case in "My Queue":</h3>
+                    {/* <h3>Modify third case in "My Queue":</h3>
                     <br />
                     <form>
                       <div className="form-group">
@@ -115,10 +115,10 @@ export default class ModalSettings extends Component {
                           />
                         </div>
                       </div>
-                    </form>
+                    </form> */}
                   </div>
 
-                  <div className="modal-footer">
+                  {/* <div className="modal-footer">
                     <button
                       type="button"
                       className="btn btn-primary disabled"
@@ -127,7 +127,7 @@ export default class ModalSettings extends Component {
                     >
                       Update (Working on it now)
                     </button>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>

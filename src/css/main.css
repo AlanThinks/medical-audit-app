@@ -291,6 +291,16 @@ span.dot {
   background-color: var(--circ3Light);
 }
 /* DashboardView -> MyQueue ------ */
+h2 > i {
+  float: right;
+  opacity: 0.5;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+h2 > i:hover {
+  opacity: 1;
+  font-size: 1.1em;
+}
 .btn-case {
   background-color: var(--taskGrey);
   width: 325px;

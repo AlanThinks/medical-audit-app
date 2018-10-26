@@ -4,7 +4,9 @@ export default class MyTasks extends Component {
   render() {
     return (
       <div className="col-lg-5 my-tasks">
-        <h2>My Tasks</h2>
+        <h2>
+          My Tasks <i class="fas fa-plus" />
+        </h2>
         <div className="all-tasks">
           <div className="row">
             <div className="col-2">

@@ -10,7 +10,10 @@ export default class MyQueue extends Component {
           const { myQueue } = value
           return (
             <div className="col-lg-5 my-queue">
-              <h2>My Queue</h2>
+              <h2>
+                My Queue
+                <i class="fas fa-plus" />
+              </h2>
               {myQueue.map(caseItem => (
                 <CaseButton
                   key={caseItem.id}
