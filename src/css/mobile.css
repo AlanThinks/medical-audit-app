@@ -27,16 +27,26 @@
     opacity: 0.65;
   }
   /* DashboardView -> TeamSummary */
-  .summary h2 > i,
-  .my-queue h2 > i,
-  .week-stats h2 > i {
+  .summary h2 > i:nth-child(1),
+  .my-tasks h2 > i:nth-child(1),
+  .my-queue h2 > i:nth-child(1),
+  .week-stats h2 > i:nth-child(1) {
     display: inline;
     cursor: pointer;
     margin-left: 10px;
     color: var(--darkBlue);
+    font-size: 2.5rem;
+  }
+  .summary h2 > i:nth-child(1):hover,
+  .my-tasks h2 > i:nth-child(1):hover,
+  .my-queue h2 > i:nth-child(1):hover,
+  .week-stats h2 > i:nth-child(1):hover {
+    font-size: 2.5rem;
+    opacity: 0.8;
   }
   .summary > h2 + div,
-  .my-queue > h2 + i,
+  .my-tasks > h2 + div,
+  .my-queue > h2 + div,
   .week-stats > h2 + div {
     opacity: 1;
     transition: all 1s;

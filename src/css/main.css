@@ -191,7 +191,9 @@ h3 {
   background-color: var(--bar34);
 }
 /* DashboardView -> MyTasks ------ */
-.summary h2 > i {
+.summary h2 > i:nth-child(1),
+.my-queue h2 > i:nth-child(1),
+.week-stats h2 > i:nth-child(1) {
   display: none;
 }
 .my-tasks .all-tasks {
@@ -306,15 +308,16 @@ span.dot {
   background-color: var(--circ3Light);
 }
 /* DashboardView -> MyQueue ------ */
-.my-queue h2 > i:nth-child(2),
-.my-tasks h2 > i:nth-child(2) {
+.my-queue h2 i:nth-child(2),
+.my-tasks h2 i:nth-child(1) {
   float: right;
   opacity: 0.5;
   transition: all 0.2s;
   cursor: pointer;
 }
-.my-queue h2 > i:hover,
-.my-tasks h2 > i:hover {
+
+.my-queue h2 > i:nth-child(2):hover,
+.my-tasks h2 > i:nth-child(2):hover {
   opacity: 1;
   font-size: 1.1em;
 }
