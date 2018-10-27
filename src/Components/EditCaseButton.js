@@ -34,7 +34,7 @@ export default class EditCaseButton extends Component {
           return (
             <div className={`row btn-case new-case`}>
               <div className="col">
-                <i onClick={this.updateCase} className="fas fa-times" />
+                <i onClick={this.updateCase} className="fas fa-save" />
                 <form onSubmit={this.updateCase}>
                   <div className="form-group">
                     <label htmlFor="idNumberInput">ID Number</label>

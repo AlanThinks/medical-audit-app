@@ -461,7 +461,7 @@ h2 > i:hover {
 }
 .new-case i:hover {
   opacity: 1;
-  transform: rotate(90deg);
+  transform: rotate(10deg);
 }
 .new-case label {
   font-family: "Bai Jamjuree", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
