@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import CaseButton from "../CaseButton"
+import NewCaseButton from "../EditCaseButton"
 import { Consumer } from "../../context"
 
 export default class MyQueue extends Component {
@@ -12,8 +13,9 @@ export default class MyQueue extends Component {
             <div className="col-lg-5 my-queue">
               <h2>
                 My Queue
-                <i class="fas fa-plus" />
+                <i className="fas fa-plus" />
               </h2>
+              {/* <NewCaseButton /> */}
               {myQueue.map(caseItem => (
                 <CaseButton
                   key={caseItem.id}

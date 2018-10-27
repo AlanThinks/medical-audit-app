@@ -85,6 +85,13 @@ export class Provider extends Component {
       "Radiology",
       "Emergency"
     ],
+    categories: [
+      "Orthopedic",
+      "Dentist",
+      "Neurology",
+      "Optometry",
+      "Respiratory"
+    ],
     dispatch: action => this.setState(state => reducer(state, action))
   }
 

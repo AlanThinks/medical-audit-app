@@ -92,7 +92,19 @@ h3 {
   box-shadow: var(--charcoal) 1px 1px 8px;
   border: 1px solid var(--white);
 }
-
+.navbar .user-picture + i.fa-cog {
+  cursor: pointer;
+  position: relative;
+  top: 20px;
+  right: 13px;
+  font-size: 1.5rem;
+  color: var(--darkBlue);
+  text-shadow: 0px 0px 2px white;
+  transition: all 0.2s;
+}
+.navbar .user-picture + i.fa-cog:hover {
+  transform: rotate(100deg);
+}
 .dropdown-menu {
   border: none;
   box-shadow: var(--shadow) 2px 2px 7px;
@@ -349,9 +361,9 @@ h2 > i:hover {
   letter-spacing: 1px;
   margin: 8px 0px 0px 0px;
 }
-.btn-case .fas {
+.btn-case .fa-trash,
+.btn-case .fa-check {
   visibility: hidden;
-
   opacity: 0;
   transition: all 0.2;
 }
@@ -369,13 +381,36 @@ h2 > i:hover {
   top: 0.6rem;
 }
 .btn-case .fa-trash:hover {
-  color: red;
+  color: rgb(218, 0, 0);
+  transform: rotate(15deg);
 }
-
-.btn-case.complete .fas {
+.btn-case.complete .fa-trash,
+.btn-case.complete .fa-check {
   visibility: visible;
   opacity: 1;
-  transition: all 0.3s;
+  transition: all 0.2s;
+}
+.btn-case .fas.fa-pen {
+  visibility: visible;
+  position: absolute;
+  right: 0.6rem;
+  top: 0.6rem;
+  color: var(--charcoal);
+  transition: all 0.2s;
+  opacity: 0.2;
+}
+.btn-case .fas.fa-pen:hover {
+  opacity: 1;
+  transform: rotate(-15deg);
+}
+.btn-case.complete .fas.fa-pen {
+  visibility: hidden;
+  opacity: 0;
+}
+
+.btn-case .fa-pen {
+  visibility: visible;
+  position: absolute;
 }
 .case-description ul {
   margin: 0px 0px 8px 0px;
@@ -410,6 +445,48 @@ h2 > i:hover {
   color: var(--offBalanceTxt);
   font-weight: 500;
 }
+
+/* DashboardView -> MyQueue -> NewCaseButton */
+.new-case {
+  padding: 5px 5px 25px 5px;
+}
+.new-case i {
+  position: absolute;
+  right: 3px;
+  top: 3px;
+  color: var(--darkBlue);
+  opacity: 0.5;
+  transition: all 0.2s;
+  font-size: 1.2rem;
+}
+.new-case i:hover {
+  opacity: 1;
+  transform: rotate(90deg);
+}
+.new-case label {
+  font-family: "Bai Jamjuree", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-weight: 500;
+  font-size: 0.9rem;
+  color: var(--darkBlue);
+  margin: 0;
+  margin-top: 10px;
+}
+.new-case .form-group {
+  margin: 0;
+}
+
+.new-case input,
+.new-case select {
+  font-family: "Bai Jamjuree", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-size: 0.9rem;
+  color: var(--darkBlue);
+  border-radius: 3px;
+  height: 2rem;
+  border-color: white;
+}
+
 /* CaseSearchView -------------------- */
 .casesearch-container {
   min-height: 100vh;

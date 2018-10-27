@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import EditCaseButton from "./EditCaseButton"
 import { Consumer } from "../context"
 
 export default class CaseButton extends Component {
@@ -9,8 +10,11 @@ export default class CaseButton extends Component {
       category: props.category,
       numHospitals: props.numHospitals,
       balance: props.balance,
-      isComplete: props.isComplete
+      isComplete: props.isComplete,
+      isEditing: false
     }
+    this.editCase = this.editCase.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
   deleteCase(e, dispatch) {
     dispatch({ type: "DELETE_CASE", payload: this.state })
@@ -35,11 +39,30 @@ export default class CaseButton extends Component {
       )
     }
   }
+  handleChange(e) {
+    this.setState({ [e.target.name]: e.target.value })
+  }
+  editCase() {
+    this.setState({
+      isEditing: !this.state.isEditing,
+      isComplete: !this.state.isComplete
+    })
+  }
   render() {
     return (
       <Consumer>
         {value => {
           const { hospitals, dispatch } = value
+          const { isEditing } = this.state
+          if (isEditing) {
+            return (
+              <EditCaseButton
+                currentCase={this.state}
+                editCase={this.editCase}
+                handleChange={this.handleChange}
+              />
+            )
+          }
           return (
             <div
               onClick={e => this.completeCase(e, dispatch)}
@@ -61,6 +84,10 @@ export default class CaseButton extends Component {
                 <i
                   onClick={e => this.deleteCase(e, dispatch)}
                   className="fas fa-trash"
+                />
+                <i
+                  onClick={e => this.editCase(e, dispatch)}
+                  className="fas fa-pen"
                 />
                 <div className="case-description">
                   <ul className="tags">

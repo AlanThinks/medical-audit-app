@@ -27,6 +27,7 @@ export default class NavigationBar extends Component {
                 src="http://alanthinks.com/projects/medical-audit-app/media/users/user1.jpg"
                 alt=""
               />
+              <i className="fas fa-cog" />
             </li>
             {/* <li className="nav-item dropdown">
               <li
