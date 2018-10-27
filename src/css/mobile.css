@@ -27,6 +27,28 @@
     opacity: 0.65;
   }
   /* DashboardView -> TeamSummary */
+  .summary h2 > i,
+  .my-queue h2 > i,
+  .week-stats h2 > i {
+    display: inline;
+    cursor: pointer;
+    margin-left: 10px;
+    color: var(--darkBlue);
+  }
+  .summary > h2 + div,
+  .my-queue > h2 + i,
+  .week-stats > h2 + div {
+    opacity: 1;
+    transition: all 1s;
+  }
+
+  .my-queue > h2 + div.not-visible,
+  .summary > h2 + div.not-visible,
+  .week-stats > h2 + div.not-visible {
+    opacity: 0;
+    display: none;
+  }
+
   .circ1,
   .circ2,
   .circ3 {
@@ -62,7 +84,7 @@
   .c100 span > img {
     width: 135px;
   }
-  .c100 span > img alt="placeholder alt text":hover {
+  .c100 span > img:hover {
     width: 145px;
   }
 }

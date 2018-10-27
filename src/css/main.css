@@ -191,6 +191,9 @@ h3 {
   background-color: var(--bar34);
 }
 /* DashboardView -> MyTasks ------ */
+.summary h2 > i {
+  display: none;
+}
 .my-tasks .all-tasks {
   margin-left: 25px;
   margin-right: 25px;
@@ -303,13 +306,15 @@ span.dot {
   background-color: var(--circ3Light);
 }
 /* DashboardView -> MyQueue ------ */
-h2 > i {
+.my-queue h2 > i:nth-child(2),
+.my-tasks h2 > i:nth-child(2) {
   float: right;
   opacity: 0.5;
   transition: all 0.2s;
   cursor: pointer;
 }
-h2 > i:hover {
+.my-queue h2 > i:hover,
+.my-tasks h2 > i:hover {
   opacity: 1;
   font-size: 1.1em;
 }

@@ -2,6 +2,10 @@ import React, { Component } from "react"
 import { Consumer } from "../../context"
 
 export default class TeamSummary extends Component {
+  state = { isVisible: false }
+  toggleView() {
+    this.setState({ isVisible: !this.state.isVisible })
+  }
   render() {
     return (
       <Consumer>
@@ -14,8 +18,20 @@ export default class TeamSummary extends Component {
           }
           return (
             <div className="col-lg-7 summary">
-              <h2>Team Summary</h2>
-              <div className="row">
+              <h2>
+                Team Summary
+                <i
+                  onClick={e => this.toggleView()}
+                  className={`fas fa-caret-${
+                    this.state.isVisible ? "down" : "up"
+                  }`}
+                />
+              </h2>
+              <div
+                className={`${
+                  this.state.isVisible ? "row" : "row not-visible"
+                }`}
+              >
                 <div className="circ1 col-lg-4">
                   <h3>October Leader</h3>
                   <div className={`circ1 c100 p${monthLeader.range} big`}>
