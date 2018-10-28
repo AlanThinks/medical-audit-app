@@ -1,33 +1,45 @@
 import React, { Component } from "react"
 import { Consumer } from "../../context"
+import uniqid from "uniqid"
 
 export default class NewCaseButton extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      id: 23423,
-      category: "optometry",
-      numHospitals: 3,
-      balance: 800,
-      isComplete: false,
+      user: {
+        id: uniqid(),
+        caseId: uniqid(),
+        numHospitals: 1,
+        category: "orthopedic",
+        balance: "",
+        isComplete: false
+      },
       toggleNewCase: this.props.toggleNewCase
     }
     this.toggleNewCase = this.toggleNewCase.bind(this)
+    this.handleChange = this.handleChange.bind(this)
   }
   createCase(e, dispatch) {
+    e.preventDefault()
     this.state.toggleNewCase()
-    // dispatch({ type: "CREATE_CASE", payload: this.state })
+    dispatch({ type: "CREATE_CASE", payload: this.state.user })
   }
 
   toggleNewCase() {
     this.state.toggleNewCase()
   }
 
+  handleChange(e) {
+    let { user } = this.state
+    user[e.target.name] = e.target.value
+    this.setState({ user: user })
+  }
   render() {
     return (
       <Consumer>
         {value => {
           const { categories, dispatch } = value
+          const { user } = this.state
           return (
             <div
               className={`row new-case ${
@@ -42,8 +54,8 @@ export default class NewCaseButton extends Component {
                     <input
                       className="form-control"
                       id="idNumberInput"
-                      name="id"
-                      value={this.state.id}
+                      name="caseId"
+                      value={user.caseId}
                       onChange={e => this.handleChange(e)}
                     />
                   </div>
@@ -61,11 +73,17 @@ export default class NewCaseButton extends Component {
                   </div>
                   <div className="form-group">
                     <label htmlFor="labelsSelect">Number of Labels</label>
-                    <select className="form-control" id="labelsSelect">
-                      <option>1</option>
-                      <option>2</option>
-                      <option>3</option>
-                      <option>4</option>
+                    <select
+                      value={user.numHospitals}
+                      onChange={this.handleChange}
+                      className="form-control"
+                      id="labelsSelect"
+                      name="numHospitals"
+                    >
+                      <option value={1}>1</option>
+                      <option value={2}>2</option>
+                      <option value={3}>3</option>
+                      <option value={4}>4</option>
                     </select>
                   </div>
                   <div className="form-group">
@@ -73,9 +91,17 @@ export default class NewCaseButton extends Component {
                     <input
                       className="form-control"
                       id="balanceInput"
-                      placeholder={this.state.balance}
+                      name="balance"
+                      value={user.balance}
+                      onChange={this.handleChange}
+                      placeholder="$0.00"
                     />
                   </div>
+                  <button
+                    style={{ display: "none" }}
+                    type="submit"
+                    value="submit"
+                  />
                 </form>
               </div>
             </div>

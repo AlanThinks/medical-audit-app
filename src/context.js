@@ -33,6 +33,16 @@ const reducer = (state, action) => {
         monthLeader,
         teamAverage
       }
+
+    case `CREATE_CASE`:
+      console.log(state.myQueue)
+      state.myQueue.unshift(action.payload)
+      console.log(updatedQueue, action.payload)
+      return {
+        ...state,
+        myQueue: state.myQueue
+      }
+
     case `UPDATE_CASE`:
       updatedQueue = state.myQueue.map((caseObj, i) => {
         if (action.payload.id === i) {
