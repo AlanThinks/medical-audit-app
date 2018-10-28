@@ -98,6 +98,11 @@
   .c100 span > img:hover {
     width: 145px;
   }
+
+  /* DashboardView -> TeamSummary -> CaseButton */
+  .my-queue div + i.fas {
+    font-size: 1.3rem;
+  }
 }
 
 @media screen and (max-width: 767px) {

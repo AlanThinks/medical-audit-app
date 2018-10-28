@@ -134,6 +134,9 @@ h3 {
 }
 
 /* NavigationBar -> ModalSettings */
+.modal-backdrop {
+  background-color: rgb(163, 223, 255);
+}
 .modal-open {
   overflow: initial;
 }
