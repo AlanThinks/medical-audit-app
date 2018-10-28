@@ -26,7 +26,7 @@ export default class CaseButton extends Component {
   }
 
   showBalance() {
-    if (this.state.balance < 1) {
+    if (this.state.balance <= 0) {
       return ""
     } else {
       return (
