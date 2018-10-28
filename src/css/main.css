@@ -135,7 +135,7 @@ h3 {
 
 /* NavigationBar -> ModalSettings */
 .modal-backdrop {
-  background-color: rgb(163, 223, 255);
+  background-color: rgb(196, 232, 255);
 }
 .modal-open {
   overflow: initial;
@@ -398,7 +398,8 @@ span.dot {
   color: rgb(208, 250, 210);
   text-shadow: 0px 0px 1px black;
 }
-.btn-case .fa-trash {
+.btn-case .fa-trash,
+.btn-case .fa-pen {
   position: absolute;
   right: 0.6rem;
   top: 0.6rem;
@@ -415,9 +416,6 @@ span.dot {
 }
 .btn-case .fas.fa-pen {
   visibility: visible;
-  position: absolute;
-  right: 0.6rem;
-  top: 0.6rem;
   color: var(--charcoal);
   transition: all 0.2s;
   opacity: 0.2;
@@ -473,6 +471,11 @@ span.dot {
 .new-case {
   padding: 5px 5px 25px 5px;
 }
+.new-case:hover {
+  background-color: var(--taskGrey);
+  box-shadow: 3px 3px 4px var(--lightShadow);
+}
+
 .new-case i {
   position: absolute;
   right: 3px;

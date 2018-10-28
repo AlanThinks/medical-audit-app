@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import TaskItem from "./TaskItem"
 
 export default class MyTasks extends Component {
   state = { isVisible: false }
@@ -24,30 +25,21 @@ export default class MyTasks extends Component {
         <div
           className={`all-tasks ${this.state.isVisible ? "" : "not-visible"}`}
         >
-          <div className="row">
-            <div className="col-2">
-              <i className="fas fa-info-circle" />
-            </div>
-            <p>Barcelona vs Real Madrid Oct/28</p>
-          </div>
-          <div className="row">
-            <div className="col-2">
-              <i className="fas fa-question-circle" />
-            </div>
-            <p>Call Doctor Smith about Invoice #3434223</p>
-          </div>
-          <div className="row">
-            <div className="col-2">
-              <i className="fas fa-smile-beam" />
-            </div>
-            <p>Follow Up with Mr. Smith at Memorial West</p>
-          </div>
-          <div className="row">
-            <button className="btn">New Task</button>
-          </div>
-          <div className="row">
-            <button className="btn">New Task</button>
-          </div>
+          <TaskItem
+            icon="fas fa-info-circle"
+            text="Barcelona vs Real Madrid Oct-28"
+          />
+          <TaskItem text="Call Doctor Smith about Invoice #3434223" />
+          <TaskItem
+            icon="fas fa-smile-beam"
+            text="Follow Up with Mr. Smith at Memorial West"
+          />
+          <TaskItem
+            icon="fas fa-info-circle"
+            text="Barcelona vs Real Madrid Oct-28"
+          />
+          <TaskItem />
+          <TaskItem />
         </div>
       </div>
     )

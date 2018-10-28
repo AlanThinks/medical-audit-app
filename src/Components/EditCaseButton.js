@@ -34,7 +34,6 @@ export default class EditCaseButton extends Component {
           return (
             <div className={`row btn-case new-case`}>
               <div className="col">
-                {" "}
                 <div>
                   <i onClick={this.updateCase} className="fas fa-save" />
                 </div>

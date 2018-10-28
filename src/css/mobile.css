@@ -100,8 +100,16 @@
   }
 
   /* DashboardView -> TeamSummary -> CaseButton */
-  .my-queue div + i.fas {
+  .btn-case .fa-trash,
+  .btn-case .fa-pen {
     font-size: 1.3rem;
+    right: 0.7rem;
+    top: 0.7rem;
+  }
+
+  .my-queue h3 {
+    margin-top: 10px;
+    margin-bottom: 8px;
   }
 }
 
