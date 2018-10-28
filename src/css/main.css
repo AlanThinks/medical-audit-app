@@ -134,7 +134,9 @@ h3 {
 }
 
 /* NavigationBar -> ModalSettings */
-
+.modal-open {
+  overflow: initial;
+}
 .modal-content {
   border-radius: 2px;
   border: none;
