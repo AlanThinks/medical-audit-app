@@ -127,6 +127,10 @@ h3 {
 .navbar .user-picture + i.fa-cog:hover {
   transform: rotate(100deg);
 }
+.navbar span {
+  font-family: "Bai Jamjuree", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+}
 .dropdown-menu {
   border: none;
   box-shadow: var(--shadow) 2px 2px 7px;
@@ -227,6 +231,9 @@ h3 {
 .my-tasks .all-tasks {
   margin-left: 25px;
   margin-right: 25px;
+  font-family: "Bai Jamjuree", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-weight: 500;
 }
 .my-tasks .all-tasks .col-2 > .fas {
   color: var(--charcoal);
@@ -264,7 +271,8 @@ h3 {
 .my-tasks .all-tasks button {
   margin: auto;
   opacity: 0.5;
-  font-size: 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 500;
   width: 33%;
   box-shadow: 1px 1px 4px var(--lightShadow);
   border-radius: 2px;
