@@ -30,7 +30,7 @@ export default class WeeklyPerformance extends Component {
                 }`}
               >
                 {users.map(user => (
-                  <BarGraphItem key={user.id} user={user} />
+                  <BarGraphItem key={user.name} user={user} />
                 ))}
               </div>
             </div>

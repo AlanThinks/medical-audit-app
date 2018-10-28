@@ -2,28 +2,10 @@ import React, { Component } from "react"
 import { Consumer } from "../../context"
 
 export default class BarGraphItem extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      numHospitals: this.props.numHospitals,
-      editCase: this.props.editCase,
-      handleChange: this.props.handleChange
-    }
-    this.updateCase = this.updateCase.bind(this)
-  }
-  handleChange(e) {
-    this.state.handleChange(e)
-  }
-  updateCase(e) {
-    this.state.editCase()
-    // dispatch({ type: "CREATE_CASE", payload: this.state })
-  }
-
   render() {
     return (
       <Consumer>
         {value => {
-          // const { categories, dispatch } = value
           const { range, name } = this.props.user
           return (
             <div className="bar-graph-group-item">
@@ -42,7 +24,7 @@ export default class BarGraphItem extends Component {
                   aria-valuemin="0"
                   aria-valuemax="100"
                 >
-                  {range < 7 ? "" : range.toString() + "%"}{" "}
+                  {range < 10 ? "" : range.toString() + "%"}{" "}
                 </div>
               </div>
             </div>

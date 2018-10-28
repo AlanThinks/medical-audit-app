@@ -24,7 +24,7 @@ export default class NavigationBar extends Component {
               <img
                 className="user-picture"
                 src="http://alanthinks.com/projects/medical-audit-app/media/users/user1.jpg"
-                alt=""
+                alt="User 1"
               />
               <i className="fas fa-cog" />
             </li>

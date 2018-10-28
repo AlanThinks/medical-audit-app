@@ -26,14 +26,17 @@ export default class CaseButton extends Component {
   }
 
   showBalance() {
-    if (this.state.balance <= 0) {
+    if (this.state.balance < 1) {
       return ""
     } else {
       return (
         <div className="balance">
           Balance:{" "}
           <span>
-            ${this.state.balance.toString().replace(/\d(?=(\d{3})+\.)/g, "$&,")}
+            $
+            {parseFloat(this.state.balance)
+              .toFixed(2)
+              .replace(/\d(?=(\d{3})+\.)/g, "$&,")}
           </span>
         </div>
       )

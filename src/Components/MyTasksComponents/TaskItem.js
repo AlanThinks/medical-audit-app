@@ -8,14 +8,6 @@ export default class TaskItem extends Component {
       icon: this.props.icon,
       text: this.props.text
     }
-    this.updateCase = this.updateCase.bind(this)
-  }
-  handleChange(e) {
-    this.state.handleChange(e)
-  }
-  updateCase(e) {
-    this.state.editCase()
-    // dispatch({ type: "CREATE_CASE", payload: this.state })
   }
   taskRendering() {
     let { icon, text } = this.state
