@@ -1,8 +1,41 @@
 /* Mobile ------------------------ */
 
 @media screen and (max-width: 990px) {
-  /* DashboardView -> WeeklyPerformance */
+  /* Global */
+  h2 {
+    font-size: 1.3rem;
+  }
+  /* Mobile Carets 🔼🔽 */
+  .summary h2 > i:nth-child(1),
+  .my-tasks h2 > i:nth-child(1),
+  .my-queue h2 > i:nth-child(1),
+  .week-stats h2 > i:nth-child(1) {
+    display: inline-block;
+    cursor: pointer;
+    margin-left: 10px;
+    color: var(--darkBlue);
+    font-size: 2rem;
+    transition: all 0.3s;
+  }
 
+  /* Mobile Expansion / Collapse */
+  .summary > h2 + div,
+  .my-tasks > h2 + div,
+  .my-queue > h2 + div,
+  .week-stats > h2 + div {
+    opacity: 1;
+    transition: all 1s;
+  }
+
+  .my-queue > h2 + div.not-visible,
+  .my-tasks > h2 + div.not-visible,
+  .summary > h2 + div.not-visible,
+  .week-stats > h2 + div.not-visible {
+    opacity: 0;
+    display: none;
+  }
+
+  /* DashboardView -> WeeklyPerformance */
   .bar-graph-group-item > img {
     height: 65px;
   }
@@ -27,38 +60,6 @@
     opacity: 0.65;
   }
   /* DashboardView -> TeamSummary */
-  .summary h2 > i:nth-child(1),
-  .my-tasks h2 > i:nth-child(1),
-  .my-queue h2 > i:nth-child(1),
-  .week-stats h2 > i:nth-child(1) {
-    display: inline;
-    cursor: pointer;
-    margin-left: 10px;
-    color: var(--darkBlue);
-    font-size: 2.5rem;
-  }
-  .summary h2 > i:nth-child(1):hover,
-  .my-tasks h2 > i:nth-child(1):hover,
-  .my-queue h2 > i:nth-child(1):hover,
-  .week-stats h2 > i:nth-child(1):hover {
-    font-size: 2.5rem;
-    opacity: 0.8;
-  }
-  .summary > h2 + div,
-  .my-tasks > h2 + div,
-  .my-queue > h2 + div,
-  .week-stats > h2 + div {
-    opacity: 1;
-    transition: all 1s;
-  }
-
-  .my-queue > h2 + div.not-visible,
-  .summary > h2 + div.not-visible,
-  .week-stats > h2 + div.not-visible {
-    opacity: 0;
-    display: none;
-  }
-
   .circ1,
   .circ2,
   .circ3 {

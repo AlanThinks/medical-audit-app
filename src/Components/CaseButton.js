@@ -81,10 +81,12 @@ export default class CaseButton extends Component {
               <div className="col pl-3">
                 <h3>#{this.state.id}</h3>
                 <i className="fas fa-check" />
-                <i
-                  onClick={e => this.deleteCase(e, dispatch)}
-                  className="fas fa-trash"
-                />
+                <div>
+                  <i
+                    onClick={e => this.deleteCase(e, dispatch)}
+                    className="fas fa-trash"
+                  />
+                </div>
                 <i
                   onClick={e => this.editCase(e, dispatch)}
                   className="fas fa-pen"

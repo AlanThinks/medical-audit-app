@@ -19,9 +19,12 @@ export default class MyQueue extends Component {
                 My Queue
                 <i
                   onClick={e => this.toggleView()}
-                  className={`fas fa-caret-${
-                    this.state.isVisible ? "down" : "up"
-                  }`}
+                  className={`fas fa-caret-down`}
+                  style={{
+                    transform: `translateY(5px) rotate(${
+                      this.state.isVisible ? "0deg" : "180deg"
+                    })`
+                  }}
                 />
                 <i className="fas fa-plus" />
               </h2>

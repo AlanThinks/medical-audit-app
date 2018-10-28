@@ -28,6 +28,7 @@ export default class ModalSettings extends Component {
           const range = value.users[0].range
           return (
             <div
+              data-show
               className="modal fade"
               id="modalSettings"
               tabIndex="-1"
@@ -36,21 +37,20 @@ export default class ModalSettings extends Component {
               <div className="modal-dialog" role="document">
                 <div className="modal-content">
                   <div className="modal-header" style={{ border: "none" }}>
-                    <h2 className="modal-title">Developer Test Settings</h2>
+                    <h2 className="modal-title">{`Demo Range Selector: ${range}%`}</h2>
                     <button
                       type="button"
                       className="close"
                       data-dismiss="modal"
                       aria-label="Close"
                     >
-                      <span aria-hidden="true">&times;</span>
+                      <span style={{ fontSize: "2.2rem" }} aria-hidden="true">
+                        &times;
+                      </span>
                     </button>
                   </div>
                   <div className="modal-body">
-                    <label htmlFor="customRange1">
-                      <h3>The following range selector does the following:</h3>
-                    </label>
-                    <div className="ml-4">
+                    {/* <div className="ml-4">
                       <ol>
                         <li>Directly modifies User 1's bar</li>
                         <li>Randomizes the other 3 bars</li>
@@ -65,7 +65,8 @@ export default class ModalSettings extends Component {
                           Placeholder: User 1's value is shown in "Team Tasks"
                         </li>
                       </ol>
-                    </div>
+                    </div> */}
+                    <h3>Select a value below:</h3>
                     <input
                       onChange={e => this.updateRange1(e, dispatch)}
                       value={range}

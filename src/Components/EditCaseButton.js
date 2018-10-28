@@ -23,7 +23,7 @@ export default class EditCaseButton extends Component {
     return (
       <Consumer>
         {value => {
-          const { categories, dispatch } = value
+          // const { categories, dispatch } = value
           const {
             id,
             category,
@@ -34,7 +34,10 @@ export default class EditCaseButton extends Component {
           return (
             <div className={`row btn-case new-case`}>
               <div className="col">
-                <i onClick={this.updateCase} className="fas fa-save" />
+                {" "}
+                <div>
+                  <i onClick={this.updateCase} className="fas fa-save" />
+                </div>
                 <form onSubmit={this.updateCase}>
                   <div className="form-group">
                     <label htmlFor="idNumberInput">ID Number</label>

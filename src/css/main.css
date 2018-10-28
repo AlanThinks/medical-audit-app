@@ -66,6 +66,28 @@ h3 {
   background-color: white;
   padding: 0;
 }
+/* Mobile Carets 🔽🔼 */
+.summary h2 > i:nth-child(1),
+.my-tasks h2 > i:nth-child(1),
+.my-queue h2 > i:nth-child(1),
+.week-stats h2 > i:nth-child(1) {
+  display: none;
+}
+
+/* ➕ Plus/Cross Symbol */
+.my-queue h2 i:nth-child(2),
+.my-tasks h2 i:nth-child(2) {
+  float: right;
+  opacity: 0.5;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.my-queue h2 > i:nth-child(2):hover,
+.my-tasks h2 > i:nth-child(2):hover {
+  opacity: 1;
+  font-size: 1.1em;
+}
 
 /* NavigationBar -------------------- */
 .navbar {
@@ -117,17 +139,23 @@ h3 {
   border-radius: 2px;
   border: none;
   box-shadow: 5px 5px 20px var(--shadow);
+  opacity: 0.8;
+}
+.modal h2 {
+  font-weight: 600;
+}
+.modal h3 {
+  padding: 0;
+  margin: 0;
+}
+.modal-header {
+  padding: 5px 15px 0 15px;
 }
 .modal button.btn-primary {
   border-radius: 2px;
   background-color: var(--primary);
   border-color: var(--primary);
   color: var(--darkBlue);
-}
-.modal-body h3 {
-  font-weight: 600;
-  font-size: 1.2rem;
-  margin-bottom: 0;
 }
 
 .modal input,
@@ -191,11 +219,6 @@ h3 {
   background-color: var(--bar34);
 }
 /* DashboardView -> MyTasks ------ */
-.summary h2 > i:nth-child(1),
-.my-queue h2 > i:nth-child(1),
-.week-stats h2 > i:nth-child(1) {
-  display: none;
-}
 .my-tasks .all-tasks {
   margin-left: 25px;
   margin-right: 25px;
@@ -308,19 +331,6 @@ span.dot {
   background-color: var(--circ3Light);
 }
 /* DashboardView -> MyQueue ------ */
-.my-queue h2 i:nth-child(2),
-.my-tasks h2 i:nth-child(1) {
-  float: right;
-  opacity: 0.5;
-  transition: all 0.2s;
-  cursor: pointer;
-}
-
-.my-queue h2 > i:nth-child(2):hover,
-.my-tasks h2 > i:nth-child(2):hover {
-  opacity: 1;
-  font-size: 1.1em;
-}
 .btn-case {
   background-color: var(--taskGrey);
   width: 325px;

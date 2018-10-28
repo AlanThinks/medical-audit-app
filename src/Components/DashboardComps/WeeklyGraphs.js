@@ -20,9 +20,12 @@ export default class WeeklyPerformanceGraphs extends Component {
                 Weekly Performance
                 <i
                   onClick={e => this.toggleView()}
-                  className={`fas fa-caret-${
-                    this.state.isVisible ? "down" : "up"
-                  }`}
+                  className={`fas fa-caret-down`}
+                  style={{
+                    transform: `translateY(5px) rotate(${
+                      this.state.isVisible ? "0deg" : "180deg"
+                    })`
+                  }}
                 />
               </h2>
               <div className={`${this.state.isVisible ? "" : "not-visible"}`}>
