@@ -2,6 +2,7 @@ import React, { Component } from "react"
 const Context = React.createContext()
 
 const reducer = (state, action) => {
+  let updatedQueue = []
   switch (action.type) {
     case `RANGE_UPDATE`:
       const random2 = Math.ceil(Math.random() * 101)
@@ -31,8 +32,21 @@ const reducer = (state, action) => {
         monthLeader,
         teamAverage
       }
+    case `UPDATE_CASE`:
+      updatedQueue = state.myQueue.map((caseObj, i) => {
+        if (action.payload.index === i) {
+          return action.payload
+        }
+        return caseObj
+      })
+
+      return {
+        ...state,
+        myQueue: updatedQueue
+      }
+
     case `DELETE_CASE`:
-      const updatedQueue = state.myQueue.filter(
+      updatedQueue = state.myQueue.filter(
         caseObj => action.payload.id !== caseObj.id
       )
 

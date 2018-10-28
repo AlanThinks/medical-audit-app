@@ -364,7 +364,7 @@ span.dot {
 /* DashboardView -> MyQueue ------ */
 .btn-case {
   background-color: var(--taskGrey);
-  width: 325px;
+  max-width: 325px;
   margin: auto;
   min-height: 100px;
   margin-bottom: 12px;
