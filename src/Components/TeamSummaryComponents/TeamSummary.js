@@ -65,7 +65,7 @@ export default class TeamSummary extends Component {
                 <div className="circ2 col-lg-4">
                   <h3>Team Average</h3>
                   <div className={`circ2 c100 p${teamAverage} big`}>
-                    <span>{teamAverage}</span>
+                    <span>{teamAverage}%</span>
                     <div className="slice">
                       <div className="bar" />
                       <div className="fill" />
@@ -88,7 +88,7 @@ export default class TeamSummary extends Component {
                 <div className="circ3 col-lg-4">
                   <h3>Team Tasks</h3>
                   <div className={`circ3 c100 p${user1.range} big`}>
-                    <span>{user1.range}</span>
+                    <span>{user1.range}%</span>
                     <div className="slice">
                       <div className="bar" />
                       <div className="fill" />
