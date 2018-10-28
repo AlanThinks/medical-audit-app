@@ -233,11 +233,11 @@ h3 {
   font-size: 1.5rem;
   position: relative;
   top: 25%;
-  margin-right: 15px;
-  margin-left: 10px;
+  margin: auto;
   opacity: 0.55;
 }
-.my-tasks .all-tasks > .row {
+.my-tasks .all-tasks > .task-item {
+  display: flex;
   height: 60px;
   background-color: var(--taskGrey);
   margin-bottom: 2px;
@@ -248,17 +248,17 @@ h3 {
   opacity: 0.75;
   transition: all 0.2s;
 }
-.my-tasks .all-tasks > .row:hover {
+.my-tasks .task-text {
+  margin: auto;
+}
+.my-tasks .task-text p {
+  margin: 0;
+}
+.my-tasks .all-tasks > .task-item:hover {
   opacity: 1;
 }
-.my-tasks .all-tasks > .row:nth-child(odd) {
+.my-tasks .all-tasks > .task-item:nth-child(odd) {
   background-color: var(--taskBlue);
-}
-
-.my-tasks .all-tasks > .row > p {
-  position: relative;
-  top: 25%;
-  opacity: 1;
 }
 
 .my-tasks .all-tasks button {
@@ -274,8 +274,8 @@ h3 {
 .my-tasks .all-tasks button:hover {
   opacity: 0.9;
 }
-/* DashboardView -> TeamSummary -- */
 
+/* DashboardView -> TeamSummary -- */
 .summary h3 {
   text-align: center;
 }

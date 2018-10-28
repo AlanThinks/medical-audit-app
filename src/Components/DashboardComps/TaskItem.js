@@ -24,18 +24,18 @@ export default class TaskItem extends Component {
         icon = "fas fa-question-circle"
       }
       return (
-        <div className="row">
+        <div className="row task-item">
           <div className="col-2">
             <i className={icon} />
           </div>
-          <div className="col">
+          <div className="col task-text">
             <p>{text}</p>
           </div>
         </div>
       )
     }
     return (
-      <div className="row">
+      <div className="row task-item">
         <button className="btn">New Task</button>
       </div>
     )
