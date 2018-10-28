@@ -17,20 +17,33 @@
     font-size: 2rem;
     transition: all 0.3s;
   }
+  h2 i.fa-caret-up {
+    transform: translateY(5px);
+  }
+  h2 i.rotate-carat {
+    transform: translateY(5px) rotate(-180deg);
+  }
 
   /* Mobile Expansion / Collapse */
-  .summary > h2 + div,
-  .my-tasks > h2 + div,
-  .my-queue > h2 + div,
-  .week-stats > h2 + div {
+  .summary > h2,
+  .my-tasks > h2,
+  .my-queue > h2,
+  .week-stats > h2 {
+    cursor: pointer;
+  }
+
+  .my-queue > .all-cases,
+  .my-tasks > .all-tasks,
+  .summary > .all-team-data,
+  .week-stats > .all-graph-items {
     opacity: 1;
     transition: all 1s;
   }
 
-  .my-queue > h2 + div.not-visible,
-  .my-tasks > h2 + div.not-visible,
-  .summary > h2 + div.not-visible,
-  .week-stats > h2 + div.not-visible {
+  .my-queue > .all-cases.not-visible,
+  .my-tasks > .all-tasks.not-visible,
+  .summary > .all-team-data.not-visible,
+  .week-stats > .all-graph-items.not-visible {
     opacity: 0;
     display: none;
   }

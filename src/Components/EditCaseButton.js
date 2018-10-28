@@ -24,13 +24,7 @@ export default class EditCaseButton extends Component {
       <Consumer>
         {value => {
           // const { categories, dispatch } = value
-          const {
-            id,
-            category,
-            numHospitals,
-            balance,
-            isComplete
-          } = this.props.currentCase
+          const { id, balance } = this.props.currentCase
           return (
             <div className={`row new-case`}>
               <div className="col">

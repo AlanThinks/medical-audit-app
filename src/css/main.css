@@ -89,16 +89,18 @@ i.fa-cog {
 }
 
 /* ➕ Plus/Cross Symbol */
-.my-queue h2 i:nth-child(2),
-.my-tasks h2 i:nth-child(2) {
-  float: right;
+.my-queue .fa-plus,
+.my-tasks .fa-plus {
+  position: absolute;
+  right: 20px;
+  top: 26px;
   opacity: 0.5;
   transition: all 0.2s;
   cursor: pointer;
 }
 
-.my-queue h2 > i:nth-child(2):hover,
-.my-tasks h2 > i:nth-child(2):hover {
+.my-queue .fa-plus:hover,
+.my-tasks .fa-plus:hover {
   opacity: 1;
   font-size: 1.1em;
 }

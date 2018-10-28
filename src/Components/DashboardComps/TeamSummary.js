@@ -1,8 +1,13 @@
 import React, { Component } from "react"
 import { Consumer } from "../../context"
+import SectionTitle from "./SectionTitle"
 
 export default class TeamSummary extends Component {
-  state = { isVisible: false }
+  constructor() {
+    super()
+    this.state = { isVisible: false }
+    this.toggleView = this.toggleView.bind(this)
+  }
   toggleView() {
     this.setState({ isVisible: !this.state.isVisible })
   }
@@ -18,21 +23,14 @@ export default class TeamSummary extends Component {
           }
           return (
             <div className="col-lg-7 summary">
-              <h2>
-                Team Summary
-                <i
-                  onClick={e => this.toggleView()}
-                  className={`fas fa-caret-down`}
-                  style={{
-                    transform: `translateY(5px) rotate(${
-                      this.state.isVisible ? "0deg" : "180deg"
-                    })`
-                  }}
-                />
-              </h2>
+              <SectionTitle
+                h2="Team Summary"
+                toggleView={this.toggleView}
+                isVisible={this.state.isVisible}
+              />
               <div
-                className={`${
-                  this.state.isVisible ? "row" : "row not-visible"
+                className={`row all-team-data ${
+                  this.state.isVisible ? "" : "not-visible"
                 }`}
               >
                 <div className="circ1 col-lg-4">

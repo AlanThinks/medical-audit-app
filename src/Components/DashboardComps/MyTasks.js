@@ -1,27 +1,25 @@
 import React, { Component } from "react"
 import TaskItem from "./TaskItem"
+import SectionTitle from "./SectionTitle"
 
 export default class MyTasks extends Component {
-  state = { isVisible: true }
+  constructor() {
+    super()
+    this.state = { isVisible: true }
+    this.toggleView = this.toggleView.bind(this)
+  }
   toggleView() {
     this.setState({ isVisible: !this.state.isVisible })
   }
   render() {
     return (
       <div className="col-lg-5 my-tasks">
-        <h2>
-          My Tasks
-          <i
-            onClick={e => this.toggleView()}
-            className={`fas fa-caret-down`}
-            style={{
-              transform: `translateY(5px) rotate(${
-                this.state.isVisible ? "0deg" : "180deg"
-              })`
-            }}
-          />
-          <i className="fas fa-plus" />
-        </h2>
+        <SectionTitle
+          h2="My Tasks"
+          toggleView={this.toggleView}
+          isVisible={this.state.isVisible}
+        />
+        <i className="fas fa-plus" />
         <div
           className={`all-tasks ${this.state.isVisible ? "" : "not-visible"}`}
         >

@@ -2,9 +2,14 @@ import React, { Component } from "react"
 import CaseButton from "../CaseButton"
 // import NewCaseButton from "../EditCaseButton"
 import { Consumer } from "../../context"
+import SectionTitle from "./SectionTitle"
 
 export default class MyQueue extends Component {
-  state = { isVisible: false }
+  constructor() {
+    super()
+    this.state = { isVisible: false }
+    this.toggleView = this.toggleView.bind(this)
+  }
   toggleView() {
     this.setState({ isVisible: !this.state.isVisible })
   }
@@ -15,20 +20,17 @@ export default class MyQueue extends Component {
           const { myQueue } = value
           return (
             <div className="col-lg-5 my-queue">
-              <h2>
-                My Queue
-                <i
-                  onClick={e => this.toggleView()}
-                  className={`fas fa-caret-down`}
-                  style={{
-                    transform: `translateY(5px) rotate(${
-                      this.state.isVisible ? "0deg" : "180deg"
-                    })`
-                  }}
-                />
-                <i className="fas fa-plus" />
-              </h2>
-              <div className={`${this.state.isVisible ? "" : "not-visible"}`}>
+              <SectionTitle
+                h2="My Queue"
+                toggleView={this.toggleView}
+                isVisible={this.state.isVisible}
+              />
+              <i className="fas fa-plus" />
+              <div
+                className={`all-cases ${
+                  this.state.isVisible ? "" : "not-visible"
+                }`}
+              >
                 {/* <NewCaseButton /> */}
                 {myQueue.map(caseItem => (
                   <CaseButton
