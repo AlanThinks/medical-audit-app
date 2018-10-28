@@ -2,7 +2,7 @@ import React, { Component } from "react"
 import TaskItem from "./TaskItem"
 
 export default class MyTasks extends Component {
-  state = { isVisible: false }
+  state = { isVisible: true }
   toggleView() {
     this.setState({ isVisible: !this.state.isVisible })
   }

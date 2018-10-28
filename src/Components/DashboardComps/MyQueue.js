@@ -4,7 +4,7 @@ import CaseButton from "../CaseButton"
 import { Consumer } from "../../context"
 
 export default class MyQueue extends Component {
-  state = { isVisible: true }
+  state = { isVisible: false }
   toggleView() {
     this.setState({ isVisible: !this.state.isVisible })
   }

@@ -66,6 +66,10 @@ export default class ModalSettings extends Component {
                         </li>
                       </ol>
                     </div> */}
+                    <h3>
+                      <em>This app is still in progress.</em>
+                    </h3>
+                    <br />
                     <h3>Select a value below:</h3>
                     <input
                       onChange={e => this.updateRange1(e, dispatch)}
