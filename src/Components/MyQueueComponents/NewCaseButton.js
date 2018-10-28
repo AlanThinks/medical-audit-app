@@ -10,12 +10,17 @@ export default class NewCaseButton extends Component {
       numHospitals: 3,
       balance: 800,
       isComplete: false,
-      editCase: this.props.editCase
+      toggleNewCase: this.props.toggleNewCase
     }
+    this.toggleNewCase = this.toggleNewCase.bind(this)
   }
   createCase(e, dispatch) {
-    this.state.editCase()
+    this.state.toggleNewCase()
     // dispatch({ type: "CREATE_CASE", payload: this.state })
+  }
+
+  toggleNewCase() {
+    this.state.toggleNewCase()
   }
 
   render() {
@@ -24,9 +29,13 @@ export default class NewCaseButton extends Component {
         {value => {
           const { categories, dispatch } = value
           return (
-            <div className={`row btn-case new-case`}>
+            <div
+              className={`row new-case ${
+                this.props.newCaseHidden ? "" : "hide"
+              }`}
+            >
               <div className="col">
-                <i onClick={e => this.createCase()} className="fas fa-times" />
+                <i onClick={this.toggleNewCase} className="fas fa-times" />
                 <form onSubmit={e => this.createCase(e, dispatch)}>
                   <div className="form-group">
                     <label htmlFor="idNumberInput">ID Number</label>

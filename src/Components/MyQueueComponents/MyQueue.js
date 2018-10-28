@@ -7,11 +7,15 @@ import SectionTitle from "../GlobalComponents/SectionTitle"
 export default class MyQueue extends Component {
   constructor() {
     super()
-    this.state = { isVisible: false }
+    this.state = { isVisible: false, newCaseHidden: false }
     this.toggleView = this.toggleView.bind(this)
+    this.toggleNewCase = this.toggleNewCase.bind(this)
   }
   toggleView() {
     this.setState({ isVisible: !this.state.isVisible })
+  }
+  toggleNewCase() {
+    this.setState({ newCaseHidden: !this.state.newCaseHidden })
   }
   render() {
     return (
@@ -25,13 +29,16 @@ export default class MyQueue extends Component {
                 toggleView={this.toggleView}
                 isVisible={this.state.isVisible}
               />
-              <i className="fas fa-plus" />
+              <i onClick={this.toggleNewCase} className="fas fa-plus" />
               <div
                 className={`all-cases ${
                   this.state.isVisible ? "" : "not-visible"
                 }`}
               >
-                <NewCaseButton />
+                <NewCaseButton
+                  toggleNewCase={this.toggleNewCase}
+                  newCaseHidden={this.state.newCaseHidden}
+                />
                 {myQueue.map(caseItem => (
                   <CaseButton
                     key={caseItem.caseId}

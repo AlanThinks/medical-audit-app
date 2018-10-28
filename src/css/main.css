@@ -427,7 +427,7 @@ span.dot {
   text-shadow: 0px 0px 1px black;
 }
 .btn-case .fa-trash,
-.btn-case .fa-pen {
+.btn-case .fa-edit {
   position: absolute;
   right: 0.6rem;
   top: 0.6rem;
@@ -442,22 +442,23 @@ span.dot {
   opacity: 1;
   transition: all 0.2s;
 }
-.btn-case .fas.fa-pen {
+.btn-case .fas.fa-edit {
+  font-size: 1.1rem;
   visibility: visible;
   color: var(--charcoal);
   transition: all 0.2s;
   opacity: 0.2;
 }
-.btn-case .fas.fa-pen:hover {
+.btn-case .fas.fa-edit:hover {
   opacity: 1;
-  transform: rotate(-15deg);
+  transform: rotate(15deg);
 }
-.btn-case.complete .fas.fa-pen {
+.btn-case.complete .fas.fa-edit {
   visibility: hidden;
   opacity: 0;
 }
 
-.btn-case .fa-pen {
+.btn-case .fa-edit {
   visibility: visible;
   position: absolute;
 }
@@ -506,7 +507,9 @@ span.dot {
   transition: all 0.2s;
   padding: 5px 5px 25px 5px;
 }
-
+.new-case.hide {
+  display: none;
+}
 .new-case i {
   position: absolute;
   right: 3px;

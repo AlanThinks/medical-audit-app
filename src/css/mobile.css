@@ -123,7 +123,7 @@
 
   /* DashboardView -> TeamSummary -> CaseButton */
   .btn-case .fa-trash,
-  .btn-case .fa-pen {
+  .btn-case .fa-edit {
     font-size: 1.3rem;
     right: 0.7rem;
     top: 0.7rem;

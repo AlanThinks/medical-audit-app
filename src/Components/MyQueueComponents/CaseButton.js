@@ -35,7 +35,7 @@ export default class CaseButton extends Component {
       isEditing: !this.state.isEditing,
       isComplete: !this.state.user.isComplete
     })
-    if (this.state.isEditing) {
+    if (!this.state.isEditing) {
       dispatch({ type: "UPDATE_CASE", payload: this.state })
     }
   }
@@ -97,7 +97,7 @@ export default class CaseButton extends Component {
                 </div>
                 <i
                   onClick={e => this.editCase(e, dispatch)}
-                  className="fas fa-pen"
+                  className="fas fa-edit"
                 />
                 <div className="case-description">
                   <ul className="tags">

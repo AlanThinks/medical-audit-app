@@ -4,6 +4,10 @@ import { Consumer } from "../../context"
 export default class EditCaseButton extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      editCase: this.props.editCase,
+      handleChange: this.props.handleChange
+    }
     console.log(this.props)
     this.updateCase = this.updateCase.bind(this)
   }
