@@ -1,5 +1,7 @@
-See this project [Live Here](http://alanthinks.com/projects/medical-audit-app)
+# Medical Dashboard React App
 
-_Make sure you click on the **SETTINGS COG** to access the "Developer Test Settings"_
+This is the Dashboard of an App for a Medical Company to help them manage their internal audits, I did 100% of the design & implementation from Wireframing to Development.
+
+See this project [Live Here](http://alanthinks.com/projects/medical-audit-app)
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
