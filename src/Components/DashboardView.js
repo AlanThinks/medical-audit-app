@@ -1,9 +1,10 @@
 import React, { Component } from "react"
-import WeeklyPerformanceGraphs from "./DashboardComps/WeeklyGraphs"
-import MyTasks from "./DashboardComps/MyTasks"
-import TeamSummary from "./DashboardComps/TeamSummary"
-import MyQueue from "./DashboardComps/MyQueue"
 import MediaQuery from "react-responsive"
+
+import WeeklyPerformance from "./WeeklyPerfComponents/WeeklyPerformance"
+import MyTasks from "./MyTasksComponents/MyTasks"
+import TeamSummary from "./TeamSummaryComponents/TeamSummary"
+import MyQueue from "./MyQueueComponents/MyQueue"
 
 export default class DashboardView extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class DashboardView extends Component {
               if (matches) {
                 return (
                   <React.Fragment>
-                    <WeeklyPerformanceGraphs />
+                    <WeeklyPerformance />
                     <MyTasks />
                     <TeamSummary />
                     <MyQueue />
@@ -24,7 +25,7 @@ export default class DashboardView extends Component {
               } else {
                 return (
                   <React.Fragment>
-                    <WeeklyPerformanceGraphs />
+                    <WeeklyPerformance />
                     <TeamSummary />
                     <MyQueue />
                     <MyTasks />

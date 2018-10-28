@@ -1,9 +1,9 @@
 import React, { Component } from "react"
 import { Consumer } from "../../context"
-import BarGraphItem from "../BarGraphItem"
-import SectionTitle from "./SectionTitle"
+import BarGraphItem from "./BarGraphItem"
+import SectionTitle from "../GlobalComponents/SectionTitle"
 
-export default class WeeklyPerformanceGraphs extends Component {
+export default class WeeklyPerformance extends Component {
   constructor() {
     super()
     this.state = { isVisible: true }
@@ -16,7 +16,7 @@ export default class WeeklyPerformanceGraphs extends Component {
     return (
       <Consumer>
         {value => {
-          const [user1, user2, user3, user4] = value.users
+          const { users } = value
           return (
             <div className="col-lg-7 week-stats">
               <SectionTitle
@@ -29,10 +29,9 @@ export default class WeeklyPerformanceGraphs extends Component {
                   this.state.isVisible ? "" : "not-visible"
                 }`}
               >
-                <BarGraphItem user={user1} />
-                <BarGraphItem user={user2} />
-                <BarGraphItem user={user3} />
-                <BarGraphItem user={user4} />
+                {users.map(user => (
+                  <BarGraphItem key={user.id} user={user} />
+                ))}
               </div>
             </div>
           )

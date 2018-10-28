@@ -5,10 +5,10 @@ import { Provider } from "./context"
 
 // Components
 // import LoginView from "./Components/LoginView"
-import NavigationBar from "./Components/NavigationBar"
+import NavigationBar from "./Components/GlobalComponents/NavigationBar"
+import ModalSettings from "./Components/GlobalComponents/ModalSettings"
 import DashboardView from "./Components/DashboardView"
 import CaseSearchView from "./Components/CaseSearchView"
-import ModalSettings from "./Components/DashboardComps/ModalSettings"
 import "./css/styles.css"
 
 class Router extends Component {

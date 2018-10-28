@@ -1,8 +1,8 @@
 import React, { Component } from "react"
-import CaseButton from "../CaseButton"
+import CaseButton from "./CaseButton"
 // import NewCaseButton from "../EditCaseButton"
 import { Consumer } from "../../context"
-import SectionTitle from "./SectionTitle"
+import SectionTitle from "../GlobalComponents/SectionTitle"
 
 export default class MyQueue extends Component {
   constructor() {

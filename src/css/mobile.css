@@ -5,6 +5,7 @@
   h2 {
     font-size: 1.3rem;
   }
+
   /* Mobile Carets 🔼🔽 */
   .summary h2 > i:nth-child(1),
   .my-tasks h2 > i:nth-child(1),
@@ -18,10 +19,10 @@
     transition: all 0.3s;
   }
   h2 i.fa-caret-up {
-    transform: translateY(5px);
+    transform: translateY(2px);
   }
   h2 i.rotate-carat {
-    transform: translateY(5px) rotate(-180deg);
+    transform: translateY(8px) rotate(-180deg);
   }
 
   /* Mobile Expansion / Collapse */

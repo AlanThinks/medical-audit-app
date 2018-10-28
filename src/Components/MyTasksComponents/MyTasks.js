@@ -1,11 +1,11 @@
 import React, { Component } from "react"
 import TaskItem from "./TaskItem"
-import SectionTitle from "./SectionTitle"
+import SectionTitle from "../GlobalComponents/SectionTitle"
 
 export default class MyTasks extends Component {
   constructor() {
     super()
-    this.state = { isVisible: true }
+    this.state = { isVisible: false }
     this.toggleView = this.toggleView.bind(this)
   }
   toggleView() {

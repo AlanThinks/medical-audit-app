@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import { Consumer } from "../../context"
-import SectionTitle from "./SectionTitle"
+import SectionTitle from "../GlobalComponents/SectionTitle"
 
 export default class TeamSummary extends Component {
   constructor() {
