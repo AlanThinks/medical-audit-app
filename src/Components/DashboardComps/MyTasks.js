@@ -39,7 +39,6 @@ export default class MyTasks extends Component {
             text="Barcelona vs Real Madrid Oct-28"
           />
           <TaskItem />
-          <TaskItem />
         </div>
       </div>
     )

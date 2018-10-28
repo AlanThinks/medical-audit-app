@@ -16,9 +16,9 @@ export default class DashboardView extends Component {
                 return (
                   <React.Fragment>
                     <WeeklyPerformanceGraphs />
-                    <MyQueue />
-                    <TeamSummary />
                     <MyTasks />
+                    <TeamSummary />
+                    <MyQueue />
                   </React.Fragment>
                 )
               } else {

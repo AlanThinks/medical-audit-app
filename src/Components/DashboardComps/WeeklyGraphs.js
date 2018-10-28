@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { Consumer } from "../../context"
+import BarGraphItem from "../BarGraphItem"
 
 export default class WeeklyPerformanceGraphs extends Component {
   state = { isVisible: true }
@@ -10,10 +11,7 @@ export default class WeeklyPerformanceGraphs extends Component {
     return (
       <Consumer>
         {value => {
-          const user1 = value.users[0]
-          const user2 = value.users[1]
-          const user3 = value.users[2]
-          const user4 = value.users[3]
+          const [user1, user2, user3, user4] = value.users
           return (
             <div className="col-lg-7 week-stats">
               <h2>
@@ -29,78 +27,10 @@ export default class WeeklyPerformanceGraphs extends Component {
                 />
               </h2>
               <div className={`${this.state.isVisible ? "" : "not-visible"}`}>
-                <div className="bar-graph-group-item">
-                  <img
-                    alt="placeholder alt text"
-                    src="http://alanthinks.com/projects/medical-audit-app/media/users/user1.jpg"
-                  />
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: user1.range.toString() + "%" }}
-                      aria-valuenow={user1.range}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      {user1.range < 7 ? "" : user1.range.toString() + "%"}{" "}
-                    </div>
-                  </div>
-                </div>
-                <div className="bar-graph-group-item">
-                  <img
-                    alt="placeholder alt text"
-                    src="http://alanthinks.com/projects/medical-audit-app/media/users/user2.jpg"
-                  />
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: user2.range.toString() + "%" }}
-                      aria-valuenow={user2.range}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      {user2.range < 7 ? "" : user2.range.toString() + "%"}{" "}
-                    </div>
-                  </div>
-                </div>
-                <div className="bar-graph-group-item">
-                  <img
-                    alt="placeholder alt text"
-                    src="http://alanthinks.com/projects/medical-audit-app/media/users/user3.jpg"
-                  />
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: user3.range.toString() + "%" }}
-                      aria-valuenow={user3.range}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      {user3.range < 7 ? "" : user3.range.toString() + "%"}{" "}
-                    </div>
-                  </div>
-                </div>
-                <div className="bar-graph-group-item">
-                  <img
-                    alt="placeholder alt text"
-                    src="http://alanthinks.com/projects/medical-audit-app/media/users/user4.jpg"
-                  />
-                  <div className="progress">
-                    <div
-                      className="progress-bar"
-                      role="progressbar"
-                      style={{ width: user4.range.toString() + "%" }}
-                      aria-valuenow={user4.range}
-                      aria-valuemin="0"
-                      aria-valuemax="100"
-                    >
-                      {user4.range < 7 ? "" : user4.range.toString() + "%"}
-                    </div>
-                  </div>
-                </div>
+                <BarGraphItem user={user1} />
+                <BarGraphItem user={user2} />
+                <BarGraphItem user={user3} />
+                <BarGraphItem user={user4} />
               </div>
             </div>
           )
