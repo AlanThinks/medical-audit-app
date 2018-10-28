@@ -4,11 +4,7 @@ import { Consumer } from "../../context"
 export default class EditCaseButton extends Component {
   constructor(props) {
     super(props)
-    this.state = {
-      numHospitals: this.props.numHospitals,
-      editCase: this.props.editCase,
-      handleChange: this.props.handleChange
-    }
+    console.log(this.props)
     this.updateCase = this.updateCase.bind(this)
   }
   handleChange(e) {
@@ -23,7 +19,6 @@ export default class EditCaseButton extends Component {
     return (
       <Consumer>
         {value => {
-          // const { categories, dispatch } = value
           const { caseId, balance } = this.props.currentCase
           return (
             <div className={`row new-case`}>

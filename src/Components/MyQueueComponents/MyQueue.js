@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import CaseButton from "./CaseButton"
-// import NewCaseButton from "../EditCaseButton"
+import NewCaseButton from "./NewCaseButton"
 import { Consumer } from "../../context"
 import SectionTitle from "../GlobalComponents/SectionTitle"
 
@@ -31,7 +31,7 @@ export default class MyQueue extends Component {
                   this.state.isVisible ? "" : "not-visible"
                 }`}
               >
-                {/* <NewCaseButton /> */}
+                <NewCaseButton />
                 {myQueue.map(caseItem => (
                   <CaseButton
                     key={caseItem.caseId}
