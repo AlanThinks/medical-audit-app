@@ -477,11 +477,14 @@ span.dot {
 
 /* DashboardView -> MyQueue -> NewCaseButton */
 .new-case {
-  padding: 5px 5px 25px 5px;
-}
-.new-case:hover {
   background-color: var(--taskGrey);
+  width: 325px;
+  margin: auto;
+  min-height: 100px;
+  margin-bottom: 12px;
   box-shadow: 3px 3px 4px var(--lightShadow);
+  transition: all 0.2s;
+  padding: 5px 5px 25px 5px;
 }
 
 .new-case i {
