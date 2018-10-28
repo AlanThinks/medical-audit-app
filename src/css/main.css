@@ -66,6 +66,20 @@ h3 {
   background-color: white;
   padding: 0;
 }
+
+@keyframes cog-rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+i.fa-cog {
+  animation: cog-rotation 6s infinite;
+  animation-timing-function: linear;
+}
 /* Mobile Carets 🔽🔼 */
 .summary h2 > i:nth-child(1),
 .my-tasks h2 > i:nth-child(1),
@@ -139,17 +153,18 @@ h3 {
 
 /* NavigationBar -> ModalSettings */
 .modal-backdrop {
-  background-color: rgb(196, 232, 255);
+  background-color: rgb(55, 119, 160);
 }
+
 .modal-open {
   overflow: initial;
 }
 .modal-content {
   border-radius: 2px;
   border: none;
-  box-shadow: 5px 5px 20px var(--shadow);
   opacity: 0.8;
 }
+
 .modal h2 {
   font-weight: 600;
 }

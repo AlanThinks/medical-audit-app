@@ -34,10 +34,16 @@ export default class ModalSettings extends Component {
               tabIndex="-1"
               role="dialog"
             >
-              <div className="modal-dialog" role="document">
+              <div
+                className="modal-dialog modal-dialog-centered"
+                role="document"
+              >
                 <div className="modal-content">
                   <div className="modal-header" style={{ border: "none" }}>
-                    <h2 className="modal-title">{`Demo Range Selector: ${range}%`}</h2>
+                    <h2 className="modal-title">
+                      <i className="fas fa-cog" />{" "}
+                      {`Demo Range Selector: ${range}%`}
+                    </h2>
                     <button
                       type="button"
                       className="close"
