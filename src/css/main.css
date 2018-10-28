@@ -92,8 +92,9 @@ i.fa-cog {
 .my-queue .fa-plus,
 .my-tasks .fa-plus {
   position: absolute;
+  font-size: 1.4rem;
   right: 20px;
-  top: 26px;
+  top: 22px;
   opacity: 0.5;
   transition: all 0.2s;
   cursor: pointer;
@@ -102,7 +103,8 @@ i.fa-cog {
 .my-queue .fa-plus:hover,
 .my-tasks .fa-plus:hover {
   opacity: 1;
-  font-size: 1.1em;
+  font-size: 1.5em;
+  top: 21px;
 }
 
 /* NavigationBar -------------------- */
@@ -418,7 +420,7 @@ span.dot {
 }
 .btn-case .fa-check {
   position: absolute;
-  left: -3.8rem;
+  left: 1.2rem;
   bottom: 1.3rem;
   font-size: 3.5rem;
   color: rgb(208, 250, 210);
@@ -496,8 +498,8 @@ span.dot {
 /* DashboardView -> MyQueue -> NewCaseButton */
 .new-case {
   background-color: var(--taskGrey);
-  width: 325px;
   margin: auto;
+  max-width: 325px;
   min-height: 100px;
   margin-bottom: 12px;
   box-shadow: 3px 3px 4px var(--lightShadow);

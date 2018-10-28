@@ -24,7 +24,7 @@ export default class EditCaseButton extends Component {
       <Consumer>
         {value => {
           // const { categories, dispatch } = value
-          const { id, balance } = this.props.currentCase
+          const { caseId, balance } = this.props.currentCase
           return (
             <div className={`row new-case`}>
               <div className="col">
@@ -37,8 +37,8 @@ export default class EditCaseButton extends Component {
                     <input
                       className="form-control"
                       id="idNumberInput"
-                      name="id"
-                      value={id}
+                      name="caseId"
+                      value={caseId}
                       onChange={e => this.handleChange(e)}
                     />
                   </div>

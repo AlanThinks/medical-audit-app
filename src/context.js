@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import uniqid from "uniqid"
 const Context = React.createContext()
 
 const reducer = (state, action) => {
@@ -34,8 +35,8 @@ const reducer = (state, action) => {
       }
     case `UPDATE_CASE`:
       updatedQueue = state.myQueue.map((caseObj, i) => {
-        if (action.payload.index === i) {
-          return action.payload
+        if (action.payload.id === i) {
+          return action.payload.user
         }
         return caseObj
       })
@@ -70,21 +71,24 @@ export class Provider extends Component {
     ],
     myQueue: [
       {
-        id: 325314,
+        id: uniqid(),
+        caseId: "325314",
         numHospitals: 2,
         category: "respiratory",
         balance: 0,
         isComplete: false
       },
       {
-        id: 674655,
+        id: uniqid(),
+        caseId: "674655",
         numHospitals: 4,
         category: "dentistry",
         balance: 12021.97,
         isComplete: false
       },
       {
-        id: 105674,
+        id: uniqid(),
+        caseId: "105674",
         numHospitals: 3,
         category: "bones",
         balance: 0,

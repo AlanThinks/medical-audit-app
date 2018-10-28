@@ -34,12 +34,9 @@ export default class MyQueue extends Component {
                 {/* <NewCaseButton /> */}
                 {myQueue.map(caseItem => (
                   <CaseButton
-                    key={caseItem.id}
+                    key={caseItem.caseId}
+                    case={caseItem}
                     id={caseItem.id}
-                    numHospitals={caseItem.numHospitals}
-                    category={caseItem.category}
-                    balance={caseItem.balance}
-                    isComplete={caseItem.isComplete}
                   />
                 ))}
               </div>

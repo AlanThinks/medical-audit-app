@@ -6,27 +6,43 @@ export default class CaseButton extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      id: props.id,
-      category: props.category,
-      numHospitals: props.numHospitals,
-      balance: props.balance,
-      isComplete: props.isComplete,
+      user: { ...this.props.case },
+      id: this.props.id,
       isEditing: false
     }
     this.editCase = this.editCase.bind(this)
     this.handleChange = this.handleChange.bind(this)
   }
   deleteCase(e, dispatch) {
-    dispatch({ type: "DELETE_CASE", payload: this.state })
+    dispatch({ type: "DELETE_CASE", payload: this.state.user })
   }
 
   completeCase(e, dispatch) {
-    this.setState({ isComplete: !this.state.isComplete })
-    dispatch({ type: "CASE_UPDATE", payload: this.state })
+    let { user } = this.state
+    user.isComplete = !user.isComplete
+
+    this.setState({ user: user })
+    // dispatch({ type: "CASE_UPDATE", payload: this.state })
+  }
+
+  handleChange(e) {
+    let { user } = this.state
+    user[e.target.name] = e.target.value
+    this.setState({ user: user })
+  }
+  editCase(e, dispatch) {
+    this.setState({
+      isEditing: !this.state.isEditing,
+      isComplete: !this.state.user.isComplete
+    })
+    if (this.state.isEditing) {
+      dispatch({ type: "UPDATE_CASE", payload: this.state })
+    }
   }
 
   showBalance() {
-    if (this.state.balance <= 0) {
+    const { balance } = this.state.user
+    if (balance <= 0) {
       return ""
     } else {
       return (
@@ -34,7 +50,7 @@ export default class CaseButton extends Component {
           Balance:{" "}
           <span>
             $
-            {parseFloat(this.state.balance)
+            {parseFloat(balance)
               .toFixed(2)
               .replace(/\d(?=(\d{3})+\.)/g, "$&,")}
           </span>
@@ -42,26 +58,17 @@ export default class CaseButton extends Component {
       )
     }
   }
-  handleChange(e) {
-    this.setState({ [e.target.name]: e.target.value })
-  }
-  editCase() {
-    this.setState({
-      isEditing: !this.state.isEditing,
-      isComplete: !this.state.isComplete
-    })
-  }
   render() {
     return (
       <Consumer>
         {value => {
           const { hospitals, dispatch } = value
-          const { isEditing } = this.state
+          const { isEditing, user } = this.state
           if (isEditing) {
             return (
               <EditCaseButton
-                currentCase={this.state}
-                editCase={this.editCase}
+                currentCase={user}
+                editCase={e => this.editCase(e, dispatch)}
                 handleChange={this.handleChange}
               />
             )
@@ -69,21 +76,19 @@ export default class CaseButton extends Component {
           return (
             <div
               onClick={e => this.completeCase(e, dispatch)}
-              className={`row btn-case ${
-                this.state.isComplete ? "complete" : ""
-              }`}
+              className={`row btn-case ${user.isComplete ? "complete" : ""}`}
             >
               <div className="col-3">
                 <img
                   src={`http://alanthinks.com/projects/medical-audit-app/media/specialties/${
-                    this.state.category
+                    user.category
                   }.png`}
-                  alt={`${this.state.category} symbol`}
+                  alt={`${user.category} symbol`}
                 />
+                <i className="fas fa-check" />
               </div>
               <div className="col pl-3">
-                <h3>#{this.state.id}</h3>
-                <i className="fas fa-check" />
+                <h3>#{user.caseId}</h3>
                 <div>
                   <i
                     onClick={e => this.deleteCase(e, dispatch)}
@@ -96,11 +101,9 @@ export default class CaseButton extends Component {
                 />
                 <div className="case-description">
                   <ul className="tags">
-                    {hospitals
-                      .slice(0, this.state.numHospitals)
-                      .map((name, i) => (
-                        <li key={i}>{name}</li>
-                      ))}
+                    {hospitals.slice(0, user.numHospitals).map((name, i) => (
+                      <li key={i}>{name}</li>
+                    ))}
                   </ul>
                   {this.showBalance()}
                 </div>
