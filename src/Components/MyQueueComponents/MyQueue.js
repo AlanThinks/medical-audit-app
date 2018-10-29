@@ -17,9 +17,17 @@ export default class MyQueue extends Component {
   }
 
   toggleNewCase() {
-    this.setState({
-      newCaseHidden: !this.state.newCaseHidden
-    })
+    const { isVisible } = this.state
+    if (isVisible) {
+      this.setState({
+        newCaseHidden: !this.state.newCaseHidden
+      })
+    } else {
+      this.setState({
+        newCaseHidden: true,
+        isVisible: true
+      })
+    }
   }
   render() {
     return (
