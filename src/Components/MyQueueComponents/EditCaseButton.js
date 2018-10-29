@@ -37,7 +37,7 @@ export default class EditCaseButton extends Component {
                       className="form-control"
                       id="idNumberInput"
                       name="caseId"
-                      value={caseId}
+                      value={caseId.toUpperCase()}
                       onChange={e => this.handleChange(e)}
                     />
                   </div>

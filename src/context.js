@@ -82,7 +82,7 @@ export class Provider extends Component {
     myQueue: [
       {
         id: uniqid(),
-        caseId: "325314",
+        caseId: uniqid(),
         numHospitals: 2,
         category: "respiratory",
         balance: 0,
@@ -90,7 +90,7 @@ export class Provider extends Component {
       },
       {
         id: uniqid(),
-        caseId: "674655",
+        caseId: uniqid(),
         numHospitals: 4,
         category: "dentistry",
         balance: 12021.97,
@@ -98,9 +98,9 @@ export class Provider extends Component {
       },
       {
         id: uniqid(),
-        caseId: "105674",
+        caseId: uniqid(),
         numHospitals: 3,
-        category: "bones",
+        category: "orthopedic",
         balance: 0,
         isComplete: true
       }
@@ -115,7 +115,7 @@ export class Provider extends Component {
     ],
     categories: [
       "Orthopedic",
-      "Dentist",
+      "Dentistry",
       "Neurology",
       "Optometry",
       "Respiratory"

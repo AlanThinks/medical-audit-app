@@ -88,7 +88,7 @@ export default class CaseButton extends Component {
                 <i className="fas fa-check" />
               </div>
               <div className="col pl-3">
-                <h3>#{user.caseId}</h3>
+                <h3>#{user.caseId.toUpperCase()}</h3>
                 <div>
                   <i
                     onClick={e => this.deleteCase(e, dispatch)}

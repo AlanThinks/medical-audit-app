@@ -10,6 +10,7 @@
   --bar75: rgb(139, 218, 250);
   --bar81: rgb(157, 235, 224);
   --bar65: rgb(148, 207, 255);
+  --bar65hover: rgb(112, 191, 255);
   --bar34: rgb(235, 205, 197);
   --taskBlue: rgb(235, 247, 255);
   --taskGrey: rgb(241, 241, 241);
@@ -496,7 +497,7 @@ span.dot {
   font-weight: 500;
 }
 
-/* DashboardView -> MyQueue -> NewCaseButton */
+/* DashboardView -> MyQueue -> Edit/NewCaseButton */
 .new-case {
   background-color: var(--taskGrey);
   margin: auto;
@@ -545,6 +546,21 @@ span.dot {
   border-radius: 3px;
   height: 2rem;
   border-color: white;
+}
+.new-case button {
+  margin-top: 15px;
+  font-weight: 400;
+  background-color: var(--bar65);
+  color: var(--darkBlue);
+  border: none;
+  border-radius: 1px;
+}
+.new-case button:hover,
+.new-case button:focus,
+.new-case button:active {
+  box-shadow: 0px 0px 5px var(--white);
+  background-color: var(--bar65hover);
+  color: var(--darkBlue);
 }
 
 /* CaseSearchView -------------------- */

@@ -3,19 +3,23 @@ import CaseButton from "./CaseButton"
 import NewCaseButton from "./NewCaseButton"
 import { Consumer } from "../../context"
 import SectionTitle from "../GlobalComponents/SectionTitle"
+import uniqid from "uniqid"
 
 export default class MyQueue extends Component {
   constructor() {
     super()
-    this.state = { isVisible: false, newCaseHidden: false }
+    this.state = { uniqId: uniqid(), isVisible: false, newCaseHidden: false }
     this.toggleView = this.toggleView.bind(this)
     this.toggleNewCase = this.toggleNewCase.bind(this)
   }
   toggleView() {
     this.setState({ isVisible: !this.state.isVisible })
   }
+
   toggleNewCase() {
-    this.setState({ newCaseHidden: !this.state.newCaseHidden })
+    this.setState({
+      newCaseHidden: !this.state.newCaseHidden
+    })
   }
   render() {
     return (
@@ -36,14 +40,15 @@ export default class MyQueue extends Component {
                 }`}
               >
                 <NewCaseButton
+                  uniqId={this.state.uniqId}
                   toggleNewCase={this.toggleNewCase}
                   newCaseHidden={this.state.newCaseHidden}
                 />
                 {myQueue.map(caseItem => (
                   <CaseButton
-                    key={caseItem.caseId}
-                    case={caseItem}
+                    key={caseItem.id}
                     id={caseItem.id}
+                    case={caseItem}
                   />
                 ))}
               </div>
