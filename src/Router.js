@@ -1,7 +1,7 @@
 // React & Router Imports
 import React, { Component } from "react"
 import { BrowserRouter, Route, Switch } from "react-router-dom"
-import { Provider } from "./context"
+import { Provider } from "./Components/GlobalComponents/logic/context"
 
 // Components
 // import LoginView from "./Components/LoginView"

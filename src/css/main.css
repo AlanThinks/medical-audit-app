@@ -263,8 +263,9 @@ i.fa-cog {
   top: 25%;
   margin: auto;
   opacity: 0.55;
+  cursor: pointer;
 }
-.my-tasks .all-tasks > .task-item {
+.my-tasks .task-item {
   display: flex;
   height: 60px;
   background-color: var(--taskGrey);
@@ -276,17 +277,19 @@ i.fa-cog {
   opacity: 0.75;
   transition: all 0.2s;
 }
+.all-tasks .task-item:nth-child(odd) {
+  background-color: var(--taskBlue);
+}
+.all-tasks .task-item:hover {
+  opacity: 1;
+}
+
 .my-tasks .task-text {
   margin: auto;
+  cursor: pointer;
 }
 .my-tasks .task-text p {
   margin: 0;
-}
-.my-tasks .all-tasks > .task-item:hover {
-  opacity: 1;
-}
-.my-tasks .all-tasks > .task-item:nth-child(odd) {
-  background-color: var(--taskBlue);
 }
 
 .my-tasks .all-tasks button {
@@ -302,6 +305,20 @@ i.fa-cog {
 }
 .my-tasks .all-tasks button:hover {
   opacity: 0.9;
+}
+/* DashboardView -> MyTasks -> Editing */
+form div.row.task-item.editing {
+  background-color: rgb(220, 255, 199);
+}
+
+.task-item.editing textarea {
+  font-family: "Bai Jamjuree", "Roboto", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
+  font-size: 0.8rem;
+  color: var(--darkBlue);
+  background: none;
+  border: none;
+  border-bottom: 1px solid var(--charcoal);
 }
 
 /* DashboardView -> TeamSummary -- */
@@ -553,7 +570,7 @@ span.dot {
   background-color: var(--bar65);
   color: var(--darkBlue);
   border: none;
-  border-radius: 1px;
+  border-radius: 2px;
 }
 .new-case button:hover,
 .new-case button:focus,

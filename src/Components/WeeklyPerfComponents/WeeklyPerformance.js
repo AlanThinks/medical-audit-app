@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Consumer } from "../../context"
+import { Consumer } from "../GlobalComponents/logic/context"
 import BarGraphItem from "./BarGraphItem"
 import SectionTitle from "../GlobalComponents/SectionTitle"
 

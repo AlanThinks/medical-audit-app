@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Consumer } from "../../context"
+import { Consumer } from "../GlobalComponents/logic/context"
 
 export default class EditCaseButton extends Component {
   constructor(props) {

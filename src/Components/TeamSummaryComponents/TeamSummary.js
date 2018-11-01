@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Consumer } from "../../context"
+import { Consumer } from "../GlobalComponents/logic/context"
 import SectionTitle from "../GlobalComponents/SectionTitle"
 
 export default class TeamSummary extends Component {

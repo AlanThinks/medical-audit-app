@@ -1,6 +1,6 @@
 import React, { Component } from "react"
 import uniqid from "uniqid"
-import { Consumer } from "../../context"
+import { Consumer } from "../GlobalComponents/logic/context"
 
 export default class NewCaseButton extends Component {
   constructor(props) {

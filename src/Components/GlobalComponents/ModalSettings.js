@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import { Consumer } from "../../context"
+import { Consumer } from "./logic/context"
 
 export default class ModalSettings extends Component {
   state = {

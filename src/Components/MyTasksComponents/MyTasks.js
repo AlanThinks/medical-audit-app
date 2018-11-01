@@ -19,7 +19,7 @@ export default class MyTasks extends Component {
           toggleView={this.toggleView}
           isVisible={this.state.isVisible}
         />
-        <i className="fas fa-plus" />
+        {/* <i className="fas fa-plus" /> */}
         <div
           className={`all-tasks ${this.state.isVisible ? "" : "not-visible"}`}
         >

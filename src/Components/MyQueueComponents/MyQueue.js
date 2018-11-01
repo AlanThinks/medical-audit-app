@@ -1,7 +1,7 @@
 import React, { Component } from "react"
 import CaseButton from "./CaseButton"
 import NewCaseButton from "./NewCaseButton"
-import { Consumer } from "../../context"
+import { Consumer } from "../GlobalComponents/logic/context"
 import SectionTitle from "../GlobalComponents/SectionTitle"
 import uniqid from "uniqid"
 
@@ -12,6 +12,7 @@ export default class MyQueue extends Component {
     this.toggleView = this.toggleView.bind(this)
     this.toggleNewCase = this.toggleNewCase.bind(this)
   }
+
   toggleView() {
     this.setState({ isVisible: !this.state.isVisible })
   }
@@ -29,6 +30,7 @@ export default class MyQueue extends Component {
       })
     }
   }
+
   render() {
     return (
       <Consumer>
